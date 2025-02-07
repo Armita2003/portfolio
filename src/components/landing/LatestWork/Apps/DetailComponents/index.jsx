@@ -1,0 +1,50 @@
+import useResponsive from "@/hooks/useResponsive";
+import { BoldSubDetailsTypography, DetailsTypography, SubDetailsTypography, WorkDetailPercentages, WorkDetailSubTextPercentages } from "@/Styles";
+import { Grid, Stack } from "@mui/material";
+
+export const DetailsSection = ({ title, boldSubText, subtexts, secondSubtexts, percentages, image, gapSize, paddingSize }) => {
+    const SmallScreen = useResponsive("down", "md");
+    const MediumScreen = useResponsive("down", "lg");
+
+    return (
+        <Stack py={SmallScreen ? paddingSize / 2 : paddingSize}>
+            <Stack gap={SmallScreen ? gapSize / 2 : gapSize}>
+                <Stack gap={3}>
+                    <DetailsTypography>{title}</DetailsTypography>
+                    {subtexts.map((text, index) => (
+                        <SubDetailsTypography key={index}>{text}</SubDetailsTypography>
+                    ))}
+                    {boldSubText && <BoldSubDetailsTypography>{boldSubText}</BoldSubDetailsTypography>}
+                </Stack>
+                {percentages && (
+                    <Grid container justifyContent="center">
+                        {percentages.map((item, index) => (
+                            <Grid
+                                key={index}
+                                item
+                                xs={6}
+                                sm={3}
+                                md={3}
+                                display="grid"
+                                gap={MediumScreen ? 1 : SmallScreen ? 4 : 2}
+                                pb={2}
+                                borderBottom="3px"
+                            >
+                                <WorkDetailPercentages>{item.number}</WorkDetailPercentages>
+                                <WorkDetailSubTextPercentages>{item.text}</WorkDetailSubTextPercentages>
+                            </Grid>
+                        ))}
+                    </Grid>
+                )}
+                {secondSubtexts && (
+                    <Stack gap={2}>
+                        {secondSubtexts.map((text, index) => (
+                            <SubDetailsTypography key={index}>{text}</SubDetailsTypography>
+                        ))}
+                    </Stack>
+                )}
+                {image && <img src={image} alt={title} />}
+            </Stack>
+        </Stack>
+    );
+};

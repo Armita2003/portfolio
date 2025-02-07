@@ -8,10 +8,10 @@ export default function Adventures() {
     return (
         <Stack>
             <Grid container>
-                {Adventure.map((items) => {
+                {Adventure.map((items, index) => {
                     return (
                         <>
-                            <Grid item xs={12} md={4} sx={{ mb: smallScreen ? 3 : 0 }}>
+                            <Grid key={index} item xs={12} md={4} sx={{ mb: smallScreen ? 3 : 0 }}>
                                 <AdventureCompanyTypography width={89}>{items.company}</AdventureCompanyTypography>
                             </Grid>
                             <Grid item xs={12} md={8} mb={smallScreen ? 4.5 : 9}>
@@ -23,9 +23,9 @@ export default function Adventures() {
                                 </Stack>
                                 <Stack>
                                     <ul>
-                                        {items.list.map((list) => {
+                                        {items.list.map((list, index) => {
                                             return (
-                                                <li>
+                                                <li key={index}>
                                                     <AdventureListTypography>{list}</AdventureListTypography>
                                                 </li>
                                             );

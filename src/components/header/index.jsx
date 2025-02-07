@@ -38,23 +38,23 @@ export function Header() {
             </Stack>
 
             <Stack direction="row" gap={2}>
-                <LinkRoutes href="/">
-                    <SubLink onClick={() => handleClick("Work")} className={`headerSubLinks ${activeLink === "Work" ? "active" : ""}`}>
-                        Work
-                    </SubLink>
-                </LinkRoutes>
-
-                <LinkRoutes href="/Resume">
-                    <SubLink
-                        onClick={() => {
-                            handleClick("Resume");
-                            handleTabClick();
-                        }}
-                        className={`headerSubLinks ${activeLink === "Resume" ? "active" : ""}`}
-                    >
-                        Resume
-                    </SubLink>
-                </LinkRoutes>
+                <SubLink
+                    sx={{ cursor: "pointer" }}
+                    onClick={() => handleClick("Work")}
+                    className={`headerSubLinks ${activeLink === "Work" ? "active" : ""}`}
+                >
+                    Work
+                </SubLink>
+                <SubLink
+                    sx={{ cursor: "pointer" }}
+                    onClick={() => {
+                        handleClick("Resume");
+                        handleTabClick();
+                    }}
+                    className={`headerSubLinks ${activeLink === "Resume" ? "active" : ""}`}
+                >
+                    Resume
+                </SubLink>
             </Stack>
         </Stack>
     );

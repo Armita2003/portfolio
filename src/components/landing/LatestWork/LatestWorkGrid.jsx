@@ -19,7 +19,7 @@ export default function LatestWorkGrid() {
             <Grid container sx={{ rowGap: 2.5, columnGap: 2.5, display: "flex", justifyContent: "space-evenly" }}>
                 {Works.map((items, index) => {
                     return (
-                        <Grid item xs={12} md={4.75} lg={3.8}>
+                        <Grid key={index} item xs={12} md={4.75} lg={3.8}>
                             <LatestWorkContainers
                                 onClick={() => handleCardClick(items.name)}
                                 sx={{

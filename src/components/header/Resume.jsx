@@ -55,9 +55,9 @@ export default function Resume() {
                             N HISTORY
                         </ResumeCategory>
                         <Stack mt={5.3}>
-                            {Adventure.map((items) => {
+                            {Adventure.map((items, index) => {
                                 return (
-                                    <Stack width="100%" maxWidth={smallScreen ? "100%" : 753}>
+                                    <Stack key={index} width="100%" maxWidth={smallScreen ? "100%" : 753}>
                                         <Stack sx={{ mb: smallScreen ? 3 : 0 }}>
                                             <ResumeDesignRole>
                                                 {items.company} | <span style={{ fontWeight: 600 }}>{items.role}</span>
@@ -99,7 +99,7 @@ export default function Resume() {
                         <Grid container mb={10}>
                             {Skills.map((items, index) => {
                                 return (
-                                    <Grid item xs={12} sm={index >= 2 ? 4 : 6} md={12} mt={5.3}>
+                                    <Grid key={index} item xs={12} sm={index >= 2 ? 4 : 6} md={12} mt={5.3}>
                                         <Stack width="100%" maxWidth={smallScreen ? "100%" : 753}>
                                             <Stack sx={{ mb: smallScreen ? 3 : 0 }}>
                                                 <ResumeDesignRole>{items.title}</ResumeDesignRole>
