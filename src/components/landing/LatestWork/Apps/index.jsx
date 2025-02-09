@@ -51,7 +51,7 @@ export default function AppDetails({ backgroundImageUrl, appImage, logoComponent
                         src={`/WorkDetail/${appImage}`}
                         alt="Work Detail"
                         style={{
-                            width: SmallScreen ? "90%" : "600px",
+                            width: SmallScreen ? "95%" : "600px",
                             height: "auto",
                             maxWidth: "100%",
                             maxHeight: "100%",

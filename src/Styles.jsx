@@ -571,6 +571,21 @@ export const ImprovingUsabilityList = [
     "Personalized Recommendations: Implement algorithms tailored to user profiles, previous job activity, and preferences, enabling personalized job suggestions for crew and ideal candidate recommendations for yacht owners.",
 ];
 
+export const HybridCardSortingList = [
+    "Solutions: Organized by industries—Retail, Banking, Social, and E-commerce. Clicking on each reveals relevant projects, which are further clickable for detailed pages.",
+    "Expertise: Grouped by core capabilities—Data Science, Data Engineering, Custom Software, Enterprise Solutions, and Big Data, each displaying use cases.",
+    "Services: Comprehensive service offerings, including Management IT Counseling, Requirements Engineering, Project Audit, Custom Software Development, Solution Integration, Infrastructure Management, Maintenance and Back Office, and Data Engineering.",
+    "Company: Simplified into About Us and Career pages.",
+    "A “Get in Touch” button was added as a separate, prominent call-to-action for accessibility.",
+];
+
+export const CompetitiveAnalysisList = [
+    "Gain insights into digital product trends",
+    "Identify the target market and competitors",
+    "Understand how businesses discover and engage with digital solutions",
+    "Evaluate common pain points in digital product development",
+];
+
 export const UserInterviewList = [
     "Identifying key factors that motivate users to choose HUDU for their job postings or service browsing",
     "Discovering pain points users face when posting jobs, browsing through listings, or managing profiles",

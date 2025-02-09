@@ -1,16 +1,24 @@
-import { useEffect, useState } from "react";
-import { LoadingIcon } from "../../../../../public/Icons/LoadingIcon";
+import useResponsive from "@/hooks/useResponsive";
+import { Container } from "@mui/material";
+import AppDetails from ".";
+import { WelfLogo } from "../../../../../public/Icons/WorkLogos/WelfLogo";
+import WelfDetails from "./DetailComponents/WelfDetails";
+
 export function Welf() {
-    const [loading, setLoading] = useState(true);
+    const SmallScreen = useResponsive("down", "md");
 
-    useEffect(() => {
-        // Simulate a delay (e.g., fetching data or waiting for page to load)
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 2000); // Change delay as needed
-
-        return () => clearTimeout(timer);
-    }, []);
-
-    return loading ? <LoadingIcon /> : <h1>Welf</h1>;
+    return (
+        <Container maxWidth="xl" sx={{ padding: "0px !important" }}>
+            <AppDetails
+                appImage="WorkDetail4.png"
+                title="Elevate your digital game"
+                infoText="Finding talented digital product teams and managing complex development projects can be challenging. Welf Lab simplifies this process, offering businesses a trusted partner to build, scale, and launch digital products efficiently. With expertise in design, development, and deployment, Welf Lab connects innovation with execution, ensuring reliable results for global brands and startups alike."
+                backgroundImageUrl="WorkDetail/Background4.png"
+                textColor="#1F1F1F"
+                subTextColor="#1F1F1F"
+                logoComponent={<WelfLogo width={SmallScreen ? 114.5 : 229} height={SmallScreen ? 43 : 86} />}
+            />
+            <WelfDetails />
+        </Container>
+    );
 }
