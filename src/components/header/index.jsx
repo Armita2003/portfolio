@@ -2,6 +2,7 @@ import useResponsive from "@/hooks/useResponsive";
 import { Stack, styled, Typography } from "@mui/material";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Logo from "../../../public/Icons/Logo";
 
 export function Header() {
     const [activeLink, setActiveLink] = useState("");
@@ -30,8 +31,10 @@ export function Header() {
     return (
         <Stack mb={isSmallScreen ? "50px" : "100px"} direction="row" justifyContent="space-between">
             <Stack direction="row" gap={isSmallScreen ? 1 : 2}>
-                <img width={isSmallScreen ? 20 : 24} height={isSmallScreen ? 20 : 24} src="./logo.jpg" />
-
+                {/* <img width={isSmallScreen ? 20 : 24} height={isSmallScreen ? 20 : 24} src="./logo.jpg" /> */}
+                <Stack width={isSmallScreen ? 20 : 24} height={isSmallScreen ? 20 : 24}>
+                    <Logo />
+                </Stack>
                 <Typography sx={{ mt: 0.2, fontSize: isSmallScreen ? 13 : 16 }} className="heading">
                     Ersa Khorsandi
                 </Typography>
@@ -60,10 +63,6 @@ export function Header() {
     );
 }
 
-const LinkRoutes = styled(Typography)(() => ({
-    textDecoration: "none",
-    cursor: "pointer",
-}));
 const SubLink = styled(Typography)(({ theme }) => ({
     fontWeight: 500,
     color: "black",

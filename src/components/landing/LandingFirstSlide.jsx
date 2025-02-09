@@ -6,9 +6,9 @@ export default function LandingFirstSlide() {
     const isExtraSmallScreen = useResponsive("down", "sm");
 
     return (
-        <Container maxWidth="lg">
+        <Container maxWidth="xl" sx={{ padding: "0px !important" }}>
             <Grid container justifyContent="space-between" direction="row">
-                <Grid sm={7} item py={isExtraSmallScreen ? 5 : isSmallScreen ? "10px" : "119.5px"} alignSelf="center">
+                <Grid sm={6} item py={isExtraSmallScreen ? 5 : isSmallScreen ? "10px" : "119.5px"} alignSelf="center">
                     <Stack
                         alignContent="center"
                         alignSelf="center"
@@ -16,7 +16,11 @@ export default function LandingFirstSlide() {
                         pr={isExtraSmallScreen ? 0 : isSmallScreen ? 8 : 10}
                     >
                         <Stack maxWidth={isExtraSmallScreen ? "100%" : isSmallScreen ? "330px" : "513px"} gap={3}>
-                            <Typography mb={0} sx={{ fontSize: isExtraSmallScreen ? 20 : isSmallScreen ? 16 : 32 }} className="landing">
+                            <Typography
+                                mb={0}
+                                sx={{ fontSize: isExtraSmallScreen ? 20 : isSmallScreen ? 16 : 32, lineHeight: isSmallScreen ? "32px" : "40.32px" }}
+                                className="landing"
+                            >
                                 UX So Intuitive, Even Your Cat Could Use It.
                             </Typography>
                             <Typography sx={{ fontSize: isExtraSmallScreen ? 12 : isSmallScreen ? 10 : 16 }} className="landingTypography">
@@ -28,35 +32,17 @@ export default function LandingFirstSlide() {
                         </Stack>
                     </Stack>
                 </Grid>
-                <Grid sm={5} margin="auto" item width="100%" height="100%">
-                    <Stack
-                        width={isExtraSmallScreen ? "70%" : isSmallScreen ? "100%" : "min(30vw, 527px)"}
-                        height={isExtraSmallScreen ? "70%" : isSmallScreen ? "100%" : "min(30vw, 527px)"}
-                        justifySelf="center"
-                        borderRadius="50%"
-                        padding={isSmallScreen ? 3 : 5.3}
-                        gap={1}
-                        sx={{
-                            bgcolor: "rgba(140, 64, 78, 0.3)",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            overflow: "hidden",
-                            aspectRatio: 1,
-                        }}
-                    >
-                        <Stack
-                            width="100%"
-                            height="100%"
-                            borderRadius="50%"
-                            sx={{
-                                bgcolor: "rgba(161, 165, 157, 0.4)",
-                                backgroundImage: `url("/MainImage.png")`,
-                                backgroundRepeat: "no-repeat",
-                                backgroundSize: "cover",
-                                backgroundPosition: "center",
-                                overflow: "hidden",
+                <Grid sm={6} margin="auto" item width="100%" height="100%">
+                    <Stack position="relative" sx={{}}>
+                        <img
+                            style={{
+                                width: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
+                                height: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
+
+                                margin: "auto",
                             }}
+                            src="/Image.png"
+                            alt=""
                         />
                     </Stack>
                 </Grid>

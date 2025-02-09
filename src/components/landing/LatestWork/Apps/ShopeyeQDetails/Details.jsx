@@ -13,7 +13,7 @@ export default function Details() {
         router.push(`/Work/ShopeyeQ/Prototype`);
     };
     return (
-        <Container maxWidth="lg" sx={{ padding: SmallScreen ? "30px !important" : "80px !important" }}>
+        <Container maxWidth="xl" sx={{ padding: SmallScreen ? "30px !important" : "80px !important" }}>
             <DetailsSection
                 title="Operations burdened with high complexity and costs are still managed through manual processes."
                 subtexts={[
@@ -107,24 +107,17 @@ export default function Details() {
                 paddingSize={5}
             />
             <Stack pt={SmallScreen ? 2.5 : 5} pb={SmallScreen ? 5 : 10}>
-                <Stack position="relative" display="inline-block">
-                    <img
-                        src="/HighFidelityWireFrames.png"
-                        alt="High-Fidelity Wireframes: Refining the Vision"
-                        style={{ display: "block", width: "100%" }}
-                    />
+                <Stack position="relative" display="inline-block" direction="column">
+                    <img src="/HighFidelityWireFrames.png" alt="High-Fidelity Wireframes: Refining the Vision" style={{ width: "100%" }} />
                     <Button
                         variant="text"
+                        onClick={handleNavigate}
                         sx={{
                             position: "absolute",
-                            top: "30%",
+                            top: "35%",
                             left: "50%",
                             transform: "translate(-50%, -50%)",
-                            color: "white",
-                            paddingY: SmallScreen ? "6px" : "13px",
-                            paddingX: SmallScreen ? "10px" : "29px",
                         }}
-                        onClick={handleNavigate}
                     >
                         <PrototypeButtonText>Try the prototype</PrototypeButtonText>
                     </Button>

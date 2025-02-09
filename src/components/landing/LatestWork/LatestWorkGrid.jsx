@@ -1,12 +1,12 @@
 import useResponsive from "@/hooks/useResponsive";
-import { LatestWorkCircle, LatestWorkContainers, LatestWorkHoverText, LatestWorkRoleTypography, LatestWorkTitleTypography, Works } from "@/Styles";
-import { Grid, Stack } from "@mui/material";
+import { LatestWorkContainers, LatestWorkHoverText, LatestWorkRoleTypography, LatestWorkTitleTypography, Works } from "@/Styles";
+import { Box, Grid, Stack } from "@mui/material";
 import { useRouter } from "next/router";
 
 export default function LatestWorkGrid() {
     const ExtraSmallScreen = useResponsive("down", "sm");
     const SmallScreen = useResponsive("down", "md");
-    const MediumSmallScreen = useResponsive("down", "lg");
+    const MediumScreen = useResponsive("down", "lg");
 
     const router = useRouter();
 
@@ -19,7 +19,7 @@ export default function LatestWorkGrid() {
             <Grid container sx={{ rowGap: 2.5, columnGap: 2.5, display: "flex", justifyContent: "space-evenly" }}>
                 {Works.map((items, index) => {
                     return (
-                        <Grid key={index} item xs={12} md={4.75} lg={3.8}>
+                        <Grid key={index} item xs={12} md={5.8} lg={3.8}>
                             <LatestWorkContainers
                                 onClick={() => handleCardClick(items.name)}
                                 sx={{
@@ -60,53 +60,45 @@ export default function LatestWorkGrid() {
                                 <LatestWorkHoverText className="viewText" sx={{}}>
                                     View Case Study
                                 </LatestWorkHoverText>
-                                <Stack direction={ExtraSmallScreen ? "column" : "row"} justifyContent="space-between">
+                                <Stack
+                                    position="relative"
+                                    height="257px"
+                                    direction={ExtraSmallScreen ? "column" : "row"}
+                                    justifyContent="space-between"
+                                >
                                     <Stack gap={1} mt="3px">
                                         <LatestWorkTitleTypography className="texts"> {items.title}</LatestWorkTitleTypography>
                                         <LatestWorkRoleTypography className="texts"> {items.role}</LatestWorkRoleTypography>
                                     </Stack>
-
-                                    <Stack>
-                                        <LatestWorkCircle
-                                            className="circle"
-                                            sx={{
-                                                background: items.color,
-                                                width: { xs: "230px", md: "180px", lg: "212px" },
-                                                height: { xs: "230px", md: "180px", lg: "212px" },
-
-                                                alignSelf: ExtraSmallScreen ? "center" : "auto",
-                                            }}
-                                        ></LatestWorkCircle>
+                                    <Box>
                                         <img
                                             style={{
                                                 position: "absolute",
-                                                bottom: ExtraSmallScreen ? "60px" : index == 3 ? "20px" : "10px",
+                                                right: 0,
+                                                bottom: 0,
+                                                maxHeight: 212,
+                                                maxWidth: 212,
+                                                width: "80%",
+                                                height: "80%",
+                                            }}
+                                            src={items.circle}
+                                            alt={`${items.title} Background`}
+                                            className="circle"
+                                        />
+
+                                        <img
+                                            style={{
+                                                position: "absolute",
+                                                bottom: 20,
+                                                right: 0,
                                                 width: "100%",
-                                                maxWidth: ExtraSmallScreen
-                                                    ? "270px"
-                                                    : SmallScreen
-                                                    ? " 290px"
-                                                    : MediumSmallScreen
-                                                    ? "245px"
-                                                    : index == 3
-                                                    ? "290px"
-                                                    : "270px",
                                                 height: "auto",
-                                                right: ExtraSmallScreen ? "auto" : SmallScreen ? 20 : MediumSmallScreen ? 15 : 5,
-
-                                                alignContent: "center",
-
-                                                alignItems: "center",
-                                                margin: "auto",
-                                                justifyContent: "center",
-                                                justifyItems: "center",
-                                                justifySelf: "center",
-                                                alignSelf: "center",
+                                                maxWidth: index >= 3 ? "294px" : "246px",
                                             }}
                                             src={items.image}
-                                            alt={items.title}
+                                            alt={`${items.title} Background`}
                                         />
-                                    </Stack>
+                                    </Box>
                                 </Stack>
                             </LatestWorkContainers>
                         </Grid>

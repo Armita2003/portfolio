@@ -1,4 +1,3 @@
-import { Stack } from "@mui/material";
 import { useRouter } from "next/router";
 import { LoadingIcon } from "../../../../public/Icons/LoadingIcon";
 import { Appbaker } from "./Apps/Appbaker";
@@ -34,5 +33,5 @@ export default function WorkDetail() {
             }
         }
     }
-    return <Stack>{Detail()}</Stack>;
+    return <>{Detail()}</>;
 }

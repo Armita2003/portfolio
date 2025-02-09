@@ -17,7 +17,7 @@ export const DetailsSection = ({ title, boldSubText, subtexts, secondSubtexts, p
                     {boldSubText && <BoldSubDetailsTypography>{boldSubText}</BoldSubDetailsTypography>}
                 </Stack>
                 {percentages && (
-                    <Grid container justifyContent="center">
+                    <Grid container justifyContent="space-around" rowGap={3}>
                         {percentages.map((item, index) => (
                             <Grid
                                 key={index}

@@ -43,18 +43,6 @@ export const LatestWorkRoleTypography = styled(Typography)(({}) => ({
     zIndex: 1,
 }));
 
-export const LatestWorkCircle = styled(Stack)(({}) => ({
-    width: "min(25vw, 212px)",
-    height: 212,
-    borderRadius: 280,
-    aspectRatio: 1,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-    flexShrink: 0,
-}));
-
 export const LatestWorkHoverText = styled(Stack)(({}) => ({
     height: 22,
     fontFamily: `'Satoshi', sans-serif`,
@@ -142,6 +130,7 @@ export const FooterButton = styled(Button)(({}) => ({
     paddingBottom: 16,
     paddingLeft: 16,
     gap: 8,
+    textTransform: "none",
 }));
 
 export const FooterButtonText = styled(Typography)(({}) => ({
@@ -149,6 +138,7 @@ export const FooterButtonText = styled(Typography)(({}) => ({
     fontFamily: ` var(--font-pphatton), serif`,
     fontWeight: 700,
     fontSize: 20,
+    lineHeight: "33.22px",
 }));
 
 export const ResumeBody = styled(Container)(({}) => ({
@@ -255,24 +245,55 @@ export const ResumeListTypography = styled(Typography)(({ theme }) => ({
 }));
 
 export const Works = [
-    { title: "ShopeyeQ", name: "ShopeyeQ", role: "App Design", image: "/LatestWorkImages/LatestWork1.png", color: "rgba(7, 7, 58, 0.5)" },
-    { title: "HUDU", name: "HUDU", role: "App Design", image: "/LatestWorkImages/LatestWork2.png", color: "rgba(47, 99, 254, 0.5)" },
+    // { title: "ShopeyeQ", name: "ShopeyeQ", role: "App Design", image: "/LatestWorkImages/LatestWork1.png", color: "rgba(7, 7, 58, 0.5)" },
+    {
+        title: "ShopeyeQ",
+        name: "ShopeyeQ",
+        role: "App Design",
+        image: "/LatestWorkImages/ShopeyeQPhone.png",
+        circle: "/LatestWorkImages/ShopeyeQCircle.png",
+        // color: "rgba(7, 7, 58, 0.5)",
+    },
+    {
+        title: "HUDU",
+        name: "HUDU",
+        role: "App Design",
+        image: "/LatestWorkImages/HuduPhone.png",
+        circle: "/LatestWorkImages/HuduCircle.png",
+        color: "rgba(47, 99, 254, 0.5)",
+    },
     {
         title: "Yat Yap",
         name: "Yat-Yap",
         role: "App Design",
-        image: "/LatestWorkImages/LatestWork3.png",
+        image: "/LatestWorkImages/YatYapPhone.png",
         color: "linear-gradient(180deg, rgba(4, 120, 130, 0.2) 0%, rgba(4, 120, 130, 0.35) 100%)",
+        circle: "/LatestWorkImages/YatYapCircle.png",
     },
     {
         title: "WelfLab",
         name: "WelfLab",
         role: "Landing Page",
-        image: "/LatestWorkImages/LatestWork4.png",
+        image: "/LatestWorkImages/WelfLaptop.png",
         color: "rgba(209, 132, 243, 0.5)",
+        circle: "/LatestWorkImages/WelfCircle.png",
     },
-    { title: "AppBaker", name: "AppBaker", role: "Landing Page", image: "/LatestWorkImages/LatestWork5.png", color: "rgba(78, 114, 142, 0.5)" },
-    { title: "Apsy", name: "Apsy", role: "UX research / Design", image: "/LatestWorkImages/LatestWork6.png", color: "rgba(29, 114, 226, 0.5)" },
+    {
+        title: "AppBaker",
+        name: "AppBaker",
+        role: "Landing Page",
+        image: "/LatestWorkImages/AppBakerLaptop.png",
+        color: "rgba(78, 114, 142, 0.5)",
+        circle: "/LatestWorkImages/AppBakerCircle.png",
+    },
+    {
+        title: "Apsy",
+        name: "Apsy",
+        role: "UX research / Design",
+        image: "/LatestWorkImages/ApsyLaptop.png",
+        color: "rgba(29, 114, 226, 0.5)",
+        circle: "/LatestWorkImages/ApsyCircle.png",
+    },
 ];
 
 export const Adventure = [
@@ -349,8 +370,9 @@ export const Skills = [
 
 export const WorkDetailContainer = styled(Stack)(({ theme, prop }) => ({
     backgroundColor: prop,
-    // width: "100%",
+    maxWidth: "100%",
     // height: 832,
+    height: "100%",
     padding: "80px !important",
     [theme.breakpoints.down("md")]: {
         padding: "30px !important",
@@ -387,13 +409,13 @@ export const WorkDetailLandingHeaderText = styled(Typography)(({ theme }) => ({
         width: "100%",
     },
     [theme.breakpoints.down("md")]: {
-        fontSize: 28,
-        lineHeight: "37.4px",
+        fontSize: 32,
+        lineHeight: "42.4px",
         width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
-        fontSize: 16,
-        lineHeight: "28.4px",
+        fontSize: 26,
+        lineHeight: "36.4px",
         width: "100%",
     },
 }));
@@ -408,13 +430,13 @@ export const WorkDetailLandingHeaderSubText = styled(Typography)(({ theme }) => 
         width: "100%",
     },
     [theme.breakpoints.down("md")]: {
-        fontSize: 14,
-        lineHeight: "23.4px",
-        width: "100%",
+        fontSize: 16,
+        lineHeight: "28.4px",
+        // width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
-        fontSize: 11,
-        lineHeight: "18.4px",
+        fontSize: 16,
+        lineHeight: "24.4px",
     },
 }));
 
@@ -490,6 +512,7 @@ export const WorkDetailSubTextPercentages = styled(Typography)(({ theme }) => ({
     lineHeight: "22.4px",
     color: "#111111",
     // width: 280,
+    // width: "100%",
     height: 22,
     textAlign: "center",
     [theme.breakpoints.between("md", "lg")]: {

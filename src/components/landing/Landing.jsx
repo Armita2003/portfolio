@@ -1,8 +1,8 @@
 import { Header } from "../header";
-import LandingFirstSlide from "./FirstSlide";
+import LandingFirstSlide from "./LandingFirstSlide";
 import LatestWork from "./LatestWork";
 
-export function Landing(props) {
+export function Landing() {
     return (
         <>
             <Header />
