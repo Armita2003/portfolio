@@ -564,6 +564,55 @@ export const CrewMembersPercentages = [
     { text: "of crew members report lost job opportunities due to scheduling conflicts", number: "20%" },
 ];
 
+export const ProblemStatementPercentages = [
+    { text: "Didn't create an app", number: "55%" },
+    { text: "Were not published in Apsy", number: "44%" },
+    { text: "Published to the stores", number: "0.6%" },
+];
+
+export const FuturePlansList = [
+    "Continuously gather user feedback to identify emerging needs and pain points.",
+    "Explore the integration of advanced AI-driven support features, such as a chatbot for instant issue resolution.",
+    "Expand the library of pre-designed model types to cater to a broader range of user needs and industries.",
+    "Further personalize email communication by leveraging behavioral analytics to deliver even more targeted and impactful updates.",
+    "Conduct regular usability testing to ensure the platform evolves in line with user expectations and industry trends.",
+];
+
+export const KeyInsightsList = [
+    "Users spent excessive time navigating the onboarding screen, indicating a lack of clear guidance.",
+    "Drop-offs consistently occurred at points where users were required to make decisions without sufficient context or examples.",
+];
+
+export const UserQuotesList = [
+    "“The platform looks promising but feels overwhelming without clear instructions.”",
+    "“I didn’t know how to preview my app while building it.”",
+];
+
+export const SurveyFeedbackAnalysisList = [
+    "49% of respondents said they didn’t understand the next steps after naming their app.",
+    "35% felt the onboarding process lacked sufficient explanation of features.",
+    "28% wanted more visual or video-based guides.",
+];
+
+export const KeyBehavioralPatternsList = [
+    "High drop-off rates: 49% of users left the process before reaching the “app name” stage.",
+    "Heat-maps: Showed repeated clicks on non-interactive elements, indicating unclear UI design.",
+    "Session replays: Revealed users frequently revisiting the same steps, suggesting uncertainty about completing tasks.",
+];
+
+export const MeetingInsightsList = [
+    "Purpose of the Landing Page: Showcase AppBaker’s expertise in delivering digital products, ranging from MVP development to full-scale app solutions, across various industries including tech, healthcare, and e-commerce.",
+    "Target Audience: Businesses seeking to develop custom applications, including startups and enterprises in diverse sectors.",
+    "KPIs: Increase inbound inquiries, enhance brand credibility, boost client engagement, and elevate lead conversion rates.",
+    "Business Objectives: Position AppBaker as a leader in app development, drive project acquisition, and highlight their expertise in delivering secure, high-quality, and scalable digital solutions.",
+];
+
+export const SeamlessInformationArchitectureList = [
+    "Technologies: Categorized into foundational tech stacks (Mobile, Backend, Big Data) and advanced capabilities (AI, AR, Cloud), these sections align technical expertise with specific industries like Healthcare, Media, and Smart Cities.",
+    "Services: Featuring UI/UX Design, DevOps, Product Development, and more, this pillar emphasizes AppBaker’s ability to provide tailored, end-to-end solutions for diverse business needs.",
+    "Supporting Sections: Additional areas, including Projects, Insights, Careers, and About Us, offer users a deeper understanding of AppBaker’s expertise, culture, and thought leadership.",
+];
+
 export const ImprovingUsabilityList = [
     "Advanced Filtering Options: Introduce enhanced filtering to refine job searches based on yacht type, location, duration, pay, or specific crew requirements. This ensures users quickly find opportunities that match their preferences.",
     "Measuring Platform Value: Develop tools to track application success rates, response times, and interview outcomes. For yacht owners, analyze metrics such as time saved in recruitment and quality of hires. This helps users understand the tangible value YATYAP provides.",

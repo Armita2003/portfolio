@@ -22,6 +22,9 @@ export const DetailsSection = ({
     textAfterList,
     textAfterImage,
     secondImage,
+    secondBoldSubText,
+    secondList,
+    textAfterBoldText,
 }) => {
     const SmallScreen = useResponsive("down", "md");
     const MediumScreen = useResponsive("down", "lg");
@@ -29,15 +32,24 @@ export const DetailsSection = ({
     return (
         <Stack py={SmallScreen ? paddingSize / 2 : paddingSize}>
             <Stack gap={SmallScreen ? gapSize / 2 : gapSize}>
-                <Stack gap={3}>
+                <Stack gap={SmallScreen ? 1.5 : 3}>
                     <DetailsTypography>{title}</DetailsTypography>
-                    {subtexts.map((text, index) => (
-                        <SubDetailsTypography key={index}>{text}</SubDetailsTypography>
-                    ))}
+                    {subtexts && subtexts.map((text, index) => <SubDetailsTypography key={index}>{text}</SubDetailsTypography>)}
                     {boldSubText && <BoldSubDetailsTypography>{boldSubText}</BoldSubDetailsTypography>}
+                    {textAfterBoldText && <SubDetailsTypography>{textAfterBoldText}</SubDetailsTypography>}
                     {list && (
                         <ul>
                             {list.map((items) => (
+                                <li>
+                                    <ListTypography>{items}</ListTypography>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                    {secondBoldSubText && <BoldSubDetailsTypography>{secondBoldSubText}</BoldSubDetailsTypography>}
+                    {secondList && (
+                        <ul>
+                            {secondList.map((items) => (
                                 <li>
                                     <ListTypography>{items}</ListTypography>
                                 </li>

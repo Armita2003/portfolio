@@ -16,7 +16,7 @@ export function ShopeyeQ() {
                 backgroundImageUrl="WorkDetail/Background1.jpg"
                 textColor="white"
                 subTextColor="#EEF2FF"
-                logoComponent={<ShopeyeQLogo width={SmallScreen ? 116 : 232} height={SmallScreen ? 24 : 49} />}
+                logoComponent={<ShopeyeQLogo width={SmallScreen ? 116 : 232} height={49} />}
             />
             <ShopeyeQDetails />
         </Container>

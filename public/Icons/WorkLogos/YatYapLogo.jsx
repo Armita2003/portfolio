@@ -1,6 +1,6 @@
 export function YatYapLogo({ width, height }) {
     return (
-        <svg width={width} height={height} viewBox="0 0 229 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox="0 0 229 45" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="15" y="5" width="35" height="35" rx="17.5" fill="white" />
             <g filter="url(#filter0_d_0_1)">
                 <path

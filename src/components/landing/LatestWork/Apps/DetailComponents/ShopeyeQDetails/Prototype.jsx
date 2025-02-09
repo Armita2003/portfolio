@@ -1,6 +1,6 @@
 import { Stack } from "@mui/material";
 import { useState } from "react";
-import { LoadingIcon } from "../../../../../../public/Icons/LoadingIcon";
+import { LoadingIcon } from "../../../../../../../public/Icons/LoadingIcon";
 
 const Prototype = () => {
     const [loading, setLoading] = useState(true);

@@ -15,7 +15,7 @@ export function Hudu() {
                 backgroundImageUrl="WorkDetail/Background2.png"
                 textColor="#1F1F1F"
                 subTextColor="#111111"
-                logoComponent={<HuduLogo width={SmallScreen ? 116 : 232} height={SmallScreen ? 24 : 49} />}
+                logoComponent={<HuduLogo width={SmallScreen ? 80.21 : 160.42} height={35} />}
             />
             <HuduDetails />
         </Container>

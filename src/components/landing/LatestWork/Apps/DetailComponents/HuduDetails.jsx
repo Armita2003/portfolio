@@ -1,6 +1,9 @@
 import useResponsive from "@/hooks/useResponsive";
 import { HomeRedesignOutcome, HuduPercentages, ProfileRedesignOutcome, ProjectRedesignOutcome, ReflectionsList, UserInterviewList } from "@/Styles";
-import { Container } from "@mui/material";
+import { Container, Stack } from "@mui/material";
+import { HomeRedesignOutcomeSvg } from "../../../../../../public/Icons/HomeRedesignOutcome";
+import { ListingProjectsRedesignSvg } from "../../../../../../public/Icons/ListingProjectsRedesignSvg";
+import { ProfileRedesignOutcomeSvg } from "../../../../../../public/Icons/ProfileRedesignOutcomeSvg";
 import { DetailsSection } from "./DetailsSection";
 
 export default function HuduDetails() {
@@ -14,7 +17,6 @@ export default function HuduDetails() {
                     "Users of HUDU faced significant challenges due to a cluttered interface and overwhelming design. A lengthy project-posting process left users stuck, while a disorganized profile layout made it difficult to find and use key features. The absence of incentives further discouraged active participation. These issues collectively contributed to a lackluster user experience and diminished user retention.",
                 ]}
                 percentages={HuduPercentages}
-                image={null}
                 gapSize={8}
                 paddingSize={5}
             />
@@ -24,7 +26,6 @@ export default function HuduDetails() {
                     "I analyzed key competitors in the odd job marketplace to uncover design and feature gaps that HUDU could leverage to improve its user experience. Apps like TaskRabbit and Thumbtack excel in offering a wide range of services and strong task filters. However, none provide a seamless location-based job search or an intuitive profile setup process, both of which are critical for users seeking efficiency.",
                     "These insights inspired me to design a more streamlined HUDU experience, focusing on simplifying job posting, introducing location-based filtering, and enhancing user profiles to improve job visibility and ease of navigation.",
                 ]}
-                percentages={null}
                 image="/CompetitveAnalysis.png"
                 gapSize={8}
                 paddingSize={5}
@@ -39,8 +40,6 @@ export default function HuduDetails() {
                 textAfterList={[
                     "After gathering all the information gained from the interviews, it was now time to do a deeper analysis by using an empathy map.",
                 ]}
-                percentages={null}
-                secondSubtexts={null}
                 image="/UserInterviews.png"
                 textAfterImage={[
                     "When taking a look at all the notes, patterns started to emerge across the different categories, allowing me to draw key insights from them. The most prominent patterns that I discovered were the following:",
@@ -84,26 +83,50 @@ export default function HuduDetails() {
                     "The testing sessions provided valuable insights into user interactions with the redesigned homepage. Feedback highlighted that:",
                 ]}
                 list={HomeRedesignOutcome}
-                image="/HomeRedesignOutcome.png"
                 gapSize={8}
                 paddingSize={5}
             />
+            <Stack
+                py={SmallScreen ? 2.5 : 5}
+                sx={{
+                    alignItems: "center",
+                    maxWidth: "100%",
+                }}
+            >
+                <HomeRedesignOutcomeSvg />
+            </Stack>
             <DetailsSection
                 title="Outcome of Listing Projects Redesign:"
                 subtexts={["The testing sessions revealed valuable feedback on the redesigned project listing process:"]}
                 list={ProjectRedesignOutcome}
-                image="/ListingProjectRedesignOutcome.png"
                 gapSize={8}
                 paddingSize={5}
             />
+            <Stack
+                py={SmallScreen ? 2.5 : 5}
+                sx={{
+                    alignItems: "center",
+                    maxWidth: "100%",
+                }}
+            >
+                <ListingProjectsRedesignSvg />
+            </Stack>
             <DetailsSection
                 title="Outcome of Profile Redesign:"
                 subtexts={["The testing sessions provided valuable feedback on the redesigned profile:"]}
                 list={ProfileRedesignOutcome}
-                image="/ProfileRedesignOutcome.png"
                 gapSize={8}
                 paddingSize={5}
             />
+            <Stack
+                py={SmallScreen ? 2.5 : 5}
+                sx={{
+                    alignItems: "center",
+                    maxWidth: "100%",
+                }}
+            >
+                <ProfileRedesignOutcomeSvg />
+            </Stack>
             <DetailsSection
                 title="Post-Redesign Success: User Feedback and Ratings"
                 subtexts={[

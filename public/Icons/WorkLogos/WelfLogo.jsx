@@ -1,6 +1,6 @@
 export function WelfLogo({ width, height }) {
     return (
-        <svg width="204" height="45" viewBox="0 0 204 45" fill="none">
+        <svg width={width} height={height} viewBox="0 0 204 45" fill="none">
             <rect width="203.76" height="45" fill="url(#pattern0_609_19325)" />
             <defs>
                 <pattern id="pattern0_609_19325" patternContentUnits="objectBoundingBox" width="1" height="1">

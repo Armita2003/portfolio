@@ -16,7 +16,7 @@ export function YatYap() {
                 backgroundImageUrl="WorkDetail/Background3.png"
                 textColor="#FFFFFF"
                 subTextColor="#EEF2FF"
-                logoComponent={<YatYapLogo width={SmallScreen ? 114.5 : 229} height={SmallScreen ? 43 : 86} />}
+                logoComponent={<YatYapLogo width={SmallScreen ? 129.5 : 219} height={45} />}
             />
             <YatYapDetails />
         </Container>

@@ -16,7 +16,7 @@ export function Welf() {
                 backgroundImageUrl="WorkDetail/Background4.png"
                 textColor="#1F1F1F"
                 subTextColor="#1F1F1F"
-                logoComponent={<WelfLogo width={SmallScreen ? 114.5 : 229} height={SmallScreen ? 43 : 86} />}
+                logoComponent={<WelfLogo width={SmallScreen ? 101.88 : 203.76} height={45} />}
             />
             <WelfDetails />
         </Container>
