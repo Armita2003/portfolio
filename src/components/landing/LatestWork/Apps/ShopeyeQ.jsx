@@ -1,24 +1,13 @@
 import useResponsive from "@/hooks/useResponsive";
 import { Container } from "@mui/material";
-import { useEffect, useState } from "react";
 import AppDetails from ".";
-import { LoadingIcon } from "../../../../../public/Icons/LoadingIcon";
 import { ShopeyeQLogo } from "../../../../../public/Icons/WorkLogos/ShopeyeQLogo";
 import Details from "./ShopeyeQDetails/Details";
 
 export function ShopeyeQ() {
-    const [loading, setLoading] = useState(true);
     const SmallScreen = useResponsive("down", "md");
 
-    useEffect(() => {
-        document.fonts.ready.then(() => {
-            setLoading(false);
-        });
-    }, []);
-
-    return loading ? (
-        <LoadingIcon />
-    ) : (
+    return (
         <Container maxWidth="xl" sx={{ padding: "0px !important" }}>
             <AppDetails
                 appImage="WorkDetail1.png"
