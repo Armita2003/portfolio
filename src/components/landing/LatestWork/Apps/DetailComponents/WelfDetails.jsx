@@ -31,7 +31,7 @@ export default function WelfDetails() {
                 ]}
                 boldSubText={["Research Goals"]}
                 list={CompetitiveAnalysisList}
-                image="/CompetitiveAnalysisWelf.png"
+                image="/AppImages/CompetitiveAnalysisWelf.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -40,7 +40,7 @@ export default function WelfDetails() {
                 subtexts={[
                     "A deep dive into the strengths and weaknesses of top competitors in the digital design industry, including IDEO, Frog Design, and Accenture. This analysis identifies key differentiators, market positioning, and areas where WelfLab can excel, helping the platform carve out its niche by addressing gaps in affordability, accessibility, and rapid prototyping for small to mid-sized businesses.",
                 ]}
-                image="/CompetitiveAnalysisWelf2.png"
+                image="/AppImages/CompetitiveAnalysisWelf2.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -49,7 +49,7 @@ export default function WelfDetails() {
                 subtexts={[
                     "To understand WelfLab's target audience, we conducted detailed user research combining insights from industry reports, competitor reviews, and customer feedback. This process revealed common challenges faced by small business owners and startup founders looking to create cost-effective, high-quality digital products. Based on these findings, we crafted a primary persona that represents the typical WelfLab user, highlighting their goals, pain points, and how WelfLab meets their needs. This persona ensures a user-centered approach in the platform's design and development.",
                 ]}
-                image="/UserPersona.png"
+                image="/AppImages/UserPersona.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -63,7 +63,7 @@ export default function WelfDetails() {
                 textAfterList={[
                     "This outcome created a clean and efficient navigation experience, enabling users to seamlessly discover industry-specific solutions, expertise, and services while ensuring clear pathways to conversion.",
                 ]}
-                image="/HybridCardSorting.png"
+                image="/AppImages/HybridCardSorting.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -72,7 +72,7 @@ export default function WelfDetails() {
                 subtexts={[
                     "This section focuses on the creation of wireframes that define the layout and structure of the page. By prioritizing clarity and usability, the wireframes outline key elements such as navigation, content placement, and user pathways. The goal is to ensure an intuitive experience where users can seamlessly access information, interact with key sections, and achieve their goals efficiently. These wireframes serve as the foundation for the visual design and development phases, aligning the structure with user needs and business objectives.",
                 ]}
-                image="/UserCentricWireframes.png"
+                image="/AppImages/UserCentricWireframes.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -82,7 +82,7 @@ export default function WelfDetails() {
                     "Before diving into the UI design phase, the focus shifted to rebranding Welflab to better align with its identity and goals. Using Welflab’s core brand attributes—modern, neutral, fresh, simple, and minimal—I began the process by creating a mood board. This helped establish a clear visual direction for the new brand identity.",
                     "Drawing inspiration from the mood board and staying true to Welflab’s attributes, I explored multiple concepts for the new logo. Through brainstorming and several iterations, I refined the best ideas, ultimately landing on a final logo that encapsulates Welflab’s vision and values, setting a solid foundation for its updated branding.",
                 ]}
-                image="/NewBranding.png"
+                image="/AppImages/NewBranding.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -91,7 +91,7 @@ export default function WelfDetails() {
                 subtexts={[
                     "With Welflab’s new branding established, I began developing the visual design for the website’s key pages, building upon the wireframes created earlier. The focus was on seamlessly integrating the updated brand identity—ensuring consistency across layout, typography, color, and imagery. These polished designs served as the foundation for the next step: building an interactive prototype to validate the user experience through testing.",
                 ]}
-                image="/HighFidelityUIDesign.png"
+                image="/AppImages/HighFidelityUIDesign.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -100,7 +100,7 @@ export default function WelfDetails() {
                 subtexts={[
                     "To refine Welflab’s user experience, usability testing was conducted to evaluate the platform's functionality and identify areas for improvement. Key patterns emerged, offering valuable insights to guide design iterations while ensuring progress aligns with tight project timelines.",
                 ]}
-                image="/KeyPatterns.png"
+                image="/AppImages/KeyPatterns.png"
                 gapSize={8}
                 paddingSize={5}
             />

@@ -41,12 +41,12 @@ export default function ApsyDetails() {
                 list={KeyBehavioralPatternsList}
                 secondBoldSubText="Key Insights:"
                 secondList={KeyInsightsList}
-                image="/BehavioralData.png"
+                image="/AppImages/BehavioralData.png"
                 gapSize={8}
                 paddingSize={5}
             />
             <DetailsSection
-                title=" Survey Feedback Analysis"
+                title="Survey Feedback Analysis"
                 subtexts={[
                     "A targeted survey was sent to inactive users who had signed up but not fully completed the app-building process. The survey gathered 100+ responses, providing insights into their pain points and suggestions for improvement.",
                 ]}
@@ -54,7 +54,7 @@ export default function ApsyDetails() {
                 list={SurveyFeedbackAnalysisList}
                 secondBoldSubText="User quotes:"
                 secondList={UserQuotesList}
-                image="/SurveyFeedbackAnalysis.png"
+                image="/AppImages/SurveyFeedbackAnalysis.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -63,7 +63,7 @@ export default function ApsyDetails() {
                 subtexts={[
                     "After analyzing the insights from Clarity recordings and survey feedback, our team initiated a brainstorming session to address the most pressing user needs. The session aimed to reimagine the user experience and create solutions that would directly tackle the identified pain points while enhancing the platform's overall usability and trustworthiness.",
                 ]}
-                image="/BrainstormingStage.png"
+                image="/AppImages/BrainstormingStage.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -76,7 +76,7 @@ export default function ApsyDetails() {
                 textAfterBoldText={[
                     "To redesign the landing page with a focus on creating a modern, credible, and user-centric experience that communicates Apsy's value proposition effectively and builds trust at first sight.",
                 ]}
-                image="/BuildingUserTrust.png"
+                image="/AppImages/BuildingUserTrust.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -103,7 +103,7 @@ export default function ApsyDetails() {
             />
             <Stack pt={SmallScreen ? 2.5 : 5} pb={SmallScreen ? 5 : 10}>
                 <Stack position="relative" display="inline-block" direction="column">
-                    <img src="/ApsyPrototype.png" alt="High-Fidelity Wireframes: Refining the Vision" style={{ width: "100%" }} />
+                    <img src="/AppImages/ApsyPrototype.png" alt="Improving Onboarding: Implementing Tutorials" style={{ width: "100%" }} />
                     <Button
                         variant="text"
                         onClick={handleNavigate}
@@ -127,8 +127,8 @@ export default function ApsyDetails() {
                 textAfterBoldText={[
                     "To enhance support accessibility by integrating a prominent and easily reachable support button at the bottom of the screen, allowing users to directly contact Apsy’s support team and resolve issues quickly.",
                 ]}
-                image="/EnhancingSupportAccessibility.png"
-                secondImage="/EnhancingSupportAccessibility2.png"
+                image="/AppImages/EnhancingSupportAccessibility.png"
+                secondImage="/AppImages/EnhancingSupportAccessibility2.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -141,8 +141,8 @@ export default function ApsyDetails() {
                 textAfterBoldText={[
                     "To simplify the customization process by providing users with the flexibility to either type in specific requirements or choose from a variety of pre-designed model types, streamlining the path to app configuration.",
                 ]}
-                image="/CustomizationSimplification.png"
-                secondImage="/CustomizationSimplification2.png"
+                image="/AppImages/CustomizationSimplification.png"
+                secondImage="/AppImages/CustomizationSimplification2.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -155,7 +155,7 @@ export default function ApsyDetails() {
                 textAfterBoldText={[
                     "To improve email communication by ensuring users receive timely, relevant, and actionable updates that align with their progress and needs on the platform.",
                 ]}
-                image="/StreamliningEmailCommunication.png"
+                image="/AppImages/StreamliningEmailCommunication.png"
                 gapSize={8}
                 paddingSize={5}
             />

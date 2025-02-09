@@ -14,7 +14,6 @@ export default function YatYapDetails() {
                     "Managing a yacht comes with significant challenges, particularly when it comes to maintaining an efficient crew and organizing bookings. Many yacht owners face issues with outdated recruitment methods, leading to prolonged hiring processes and high crew turnover rates. Additionally, disruptions during crew transitions and onboarding exacerbate inefficiencies, with 72% of owners reporting such difficulties. The lack of a centralized communication and booking system further adds to the complexity, making it hard to optimize yacht operations. YATYAP provides a solution by centralizing these processes, reducing time spent on manual management by 25%, improving communication, and enabling better crew retention. This modern approach helps yacht owners achieve smoother and more cost-effective operations.",
                 ]}
                 percentages={YachtOwnersPercentages}
-                image={null}
                 gapSize={8}
                 paddingSize={5}
             />
@@ -32,7 +31,7 @@ export default function YatYapDetails() {
                 subtexts={[
                     "The yachting industry has several platforms catering to crew recruitment and management, but most fail to address the comprehensive needs of both yacht owners and crew members. Here’s how YATYAP differentiates itself from existing competitors:",
                 ]}
-                image="/CompetitiveAnalysis.png"
+                image="/AppImages/CompetitiveAnalysis.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -42,7 +41,7 @@ export default function YatYapDetails() {
                     "Due to limited access to a broad range of yacht owners and crew members, we turned to social listening as a key research method. By monitoring online communities, industry forums, social media platforms, and discussion threads relevant to yachting professionals, we were able to gather valuable insights into the pain points, needs, and concerns of yacht owners and crew members. Social listening allowed us to track real-time conversations, uncover emerging trends, and identify common challenges, all without needing direct one-on-one interviews.",
                     "This approach provided us with a rich dataset, revealing critical insights into issues like inefficient crew management, scheduling conflicts, and the lack of centralized platforms for communication and bookings. Through social listening, we gained an understanding of the specific frustrations and aspirations within the yachting community, helping to inform the development of YATYAP and ensure it addresses the real-world needs of its users.",
                 ]}
-                image="/ResearchMethodology.png"
+                image="/AppImages/ResearchMethodology.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -51,7 +50,7 @@ export default function YatYapDetails() {
                 subtexts={[
                     "In the research phase, we analyzed existing challenges in the yacht industry using insights gathered from social listening, competitor analysis, and reviews across several platforms like Yotspot, Yachting Pages, Quay Crew, and OnboardOnline. These insights provided a deeper understanding of the pain points faced by yacht owners and crew members, allowing us to create two key personas that represent typical users of YATYAP.",
                 ]}
-                image="/YatYapPersona.png"
+                image="/AppImages/YatYapPersona.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -60,8 +59,8 @@ export default function YatYapDetails() {
                 subtexts={[
                     "In the research phase, we analyzed existing challenges in the yacht industry using insights gathered from social listening, competitor analysis, and reviews across several platforms like Yotspot, Yachting Pages, Quay Crew, and OnboardOnline. These insights provided a deeper understanding of the pain points faced by yacht owners and crew members, allowing us to create two key personas that represent typical users of YATYAP.",
                 ]}
-                image="/UnderstandingUserNeeds1.png"
-                secondImage="/UnderstandingUserNeeds2.png"
+                image="/AppImages/UnderstandingUserNeeds1.png"
+                secondImage="/AppImages/UnderstandingUserNeeds2.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -72,8 +71,8 @@ export default function YatYapDetails() {
 
                     "To ensure YATYAP’s success and foster community trust, the app needed to tackle these challenges head-on, offering streamlined recruitment for David and personalized job-matching for Lisa. Above all, the platform had to eliminate unnecessary friction while empowering users on both sides of the yachting community.",
                 ]}
-                image="/UnderstandingUserNeeds3.png"
-                secondImage="/UnderstandingUserNeeds4.png"
+                image="/AppImages/UnderstandingUserNeeds3.png"
+                secondImage="/AppImages/UnderstandingUserNeeds4.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -84,7 +83,7 @@ export default function YatYapDetails() {
 
                     "For crew members, the platform simplifies job searches, improves communication, and streamlines scheduling to reduce frustration and missed opportunities. For yacht owners, it enhances recruitment efficiency, centralizes communication, and ensures seamless crew management to minimize operational stress. YATYAP eliminates friction, fosters trust, and empowers both groups, creating a more connected and efficient yachting community.",
                 ]}
-                image="/OptimizingExperiences.png"
+                image="/AppImages/OptimizingExperiences.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -95,7 +94,7 @@ export default function YatYapDetails() {
 
                     "By focusing on the needs of crew members and yacht owners, the design prioritizes clarity, efficiency, and user flow simplicity—empowering both sides of the yachting community to connect effortlessly.",
                 ]}
-                image="/VisualizingUserCentricExperience.png"
+                image="/AppImages/VisualizingUserCentricExperience.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -106,7 +105,7 @@ export default function YatYapDetails() {
 
                     "Additionally, users voiced a previously unspoken need: Could YATYAP provide greater transparency by visualizing their overall job application success rates or tracking the quality of connections they’re building on the platform? Such insights would empower both crew and yacht owners to better understand the value YATYAP delivers, while boosting trust and confidence in the app's ability to facilitate successful hires and career opportunities.",
                 ]}
-                image="/KeyInsights.png"
+                image="/AppImages/KeyInsights.png"
                 gapSize={8}
                 paddingSize={5}
             />

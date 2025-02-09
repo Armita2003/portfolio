@@ -26,7 +26,7 @@ export default function HuduDetails() {
                     "I analyzed key competitors in the odd job marketplace to uncover design and feature gaps that HUDU could leverage to improve its user experience. Apps like TaskRabbit and Thumbtack excel in offering a wide range of services and strong task filters. However, none provide a seamless location-based job search or an intuitive profile setup process, both of which are critical for users seeking efficiency.",
                     "These insights inspired me to design a more streamlined HUDU experience, focusing on simplifying job posting, introducing location-based filtering, and enhancing user profiles to improve job visibility and ease of navigation.",
                 ]}
-                image="/CompetitveAnalysis.png"
+                image="/AppImages/CompetitveAnalysis.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -40,11 +40,11 @@ export default function HuduDetails() {
                 textAfterList={[
                     "After gathering all the information gained from the interviews, it was now time to do a deeper analysis by using an empathy map.",
                 ]}
-                image="/UserInterviews.png"
+                image="/AppImages/UserInterviews.png"
                 textAfterImage={[
                     "When taking a look at all the notes, patterns started to emerge across the different categories, allowing me to draw key insights from them. The most prominent patterns that I discovered were the following:",
                 ]}
-                secondImage="/UserInterviews2.png"
+                secondImage="/AppImages/UserInterviews2.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -55,7 +55,7 @@ export default function HuduDetails() {
                     "Jason’s role involves navigating multiple PoS locations, scanning products, tracking stock discrepancies, and sharing results. His challenges include time-consuming manual processes and lack of integration with tools like CRM systems.",
                     "Our goal was to design a solution that simplifies Jason’s workflow, automates data entry, and enables seamless integration with third-party tools. By focusing on Jason’s needs, we ensured our design would address real-world pain points, improving efficiency and productivity for field sales representatives.",
                 ]}
-                image="/KickOffStage.png"
+                image="/AppImages/KickOffStage.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -64,7 +64,7 @@ export default function HuduDetails() {
                 subtexts={[
                     "To guide the problem-solving process, I created a Venn diagram that outlines the intersection between business goals, user goals, and technical considerations. This exercise highlights individual and shared objectives, paving a clearer path for prioritizing solutions that benefit all stakeholders while staying technically feasible.",
                 ]}
-                image="/ProjectGoals.png"
+                image="/AppImages/ProjectGoals.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -132,7 +132,7 @@ export default function HuduDetails() {
                 subtexts={[
                     "Following the HUDU app redesign, app store feedback has provided valuable insights into user satisfaction. Positive reviews emphasize improved navigation, enhanced profiles, and the overall revamped interface. The app’s average rating has risen significantly to 4.7 stars, reflecting both the quantitative and qualitative approval of users.",
                 ]}
-                image="/PostRedesignSuccess.png"
+                image="/AppImages/PostRedesignSuccess.png"
                 gapSize={8}
                 paddingSize={5}
             />

@@ -33,7 +33,7 @@ export default function LandingFirstSlide() {
                     </Stack>
                 </Grid>
                 <Grid sm={6} margin="auto" item width="100%" height="100%">
-                    <Stack position="relative" sx={{}}>
+                    <Stack position="relative">
                         <img
                             style={{
                                 width: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
@@ -41,8 +41,8 @@ export default function LandingFirstSlide() {
 
                                 margin: "auto",
                             }}
-                            src="/Image.png"
-                            alt=""
+                            src="/ProfilePic.png"
+                            alt="Profile Picture"
                         />
                     </Stack>
                 </Grid>

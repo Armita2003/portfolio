@@ -14,7 +14,7 @@ export default function AppbakerDetails() {
                 subtexts={[
                     "In analyzing competitors in the digital app development space, several key trends emerged. Competitors often highlight their expertise through client success stories and showcase their technical proficiency with interactive elements. Many prioritize a clean, modern aesthetic with a focus on user trust, security, and scalability. Opportunities include differentiating by emphasizing AppBaker’s ability to provide custom solutions across diverse sectors and offering a more personalized, client-driven approach in app development. Additionally, competitors tend to emphasize ease of use and fast delivery, areas where AppBaker could further stand out.",
                 ]}
-                image="/CompetitiveAnalysisAppbaker.png"
+                image="/AppImages/CompetitiveAnalysisAppbaker.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -23,7 +23,7 @@ export default function AppbakerDetails() {
                 subtexts={[
                     "To understand WelfLab's target audience, we conducted detailed user research combining insights from industry reports, competitor reviews, and customer feedback. This process revealed common challenges faced by small business owners and startup founders looking to create cost-effective, high-quality digital products. Based on these findings, we crafted a primary persona that represents the typical WelfLab user, highlighting their goals, pain points, and how WelfLab meets their needs. This persona ensures a user-centered approach in the platform's design and development.",
                 ]}
-                image="/UserPersonaAppbaker.png"
+                image="/AppImages/UserPersonaAppbaker.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -37,7 +37,7 @@ export default function AppbakerDetails() {
                 textAfterList={[
                     "This architecture creates an intuitive journey for users, reducing friction and enabling quick access to relevant information. Each section reflects AppBaker’s commitment to driving innovation and fostering collaboration while allowing scalability to adapt to future growth and evolving user needs.",
                 ]}
-                image="/SeamlessInformationArchitecture.png"
+                image="/AppImages/SeamlessInformationArchitecture.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -46,7 +46,7 @@ export default function AppbakerDetails() {
                 subtexts={[
                     "This section highlights the process of crafting wireframes that form the backbone of AppBaker’s platform. The wireframes were meticulously designed to emphasize clarity, functionality, and seamless interaction. By defining the layout, navigation, and content hierarchy, these wireframes ensure an intuitive user experience, guiding visitors effortlessly through key sections like Technologies, Services, and Insights.",
                 ]}
-                image="/DesigningWireframes.png"
+                image="/AppImages/DesigningWireframes.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -55,7 +55,7 @@ export default function AppbakerDetails() {
                 subtexts={[
                     "The branding and color palette were designed to convey AppBaker’s forward-thinking approach while maintaining a sense of trust and reliability. The primary colors reflect modernity and innovation, with bold and vibrant tones adding energy, while neutral shades provide balance and sophistication.",
                 ]}
-                image="/BrandingAndColors.png"
+                image="/AppImages/BrandingAndColors.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -64,7 +64,7 @@ export default function AppbakerDetails() {
                 subtexts={[
                     "When users land on the page, a spinning phone animation takes center stage. As the phone rotates, the text seamlessly changes, showcasing key messages about AppBaker’s capabilities. Once the phone settles in a steady position, the familiar iPhone background inside the phone animates to greet users with a warm “Hello” or “Bonjour.” This playful yet professional introduction sets the stage for exploring the rest of the platform while reflecting AppBaker's commitment to blending creativity and technology.",
                 ]}
-                image="/HeroAnimation.png"
+                image="/AppImages/HeroAnimation.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -74,7 +74,7 @@ export default function AppbakerDetails() {
                     "The design process focused on establishing a cohesive visual language that aligns with AppBaker’s mission of empowering users with cutting-edge solutions. Key elements such as a modern color palette, clean typography, and intuitive layouts were chosen to guide users effortlessly through the platform.",
                     "The interface emphasizes accessibility and professionalism, balancing vibrant aesthetics with functional design. From interactive call-to-action buttons to clear content hierarchies, every detail works together to create a visually engaging and user-friendly experience. This thoughtful approach ensures AppBaker’s platform is not only appealing but also effective in achieving its goals.",
                 ]}
-                image="/AppbakerVisualIdentity.png"
+                image="/AppImages/AppbakerVisualIdentity.png"
                 gapSize={8}
                 paddingSize={5}
             />

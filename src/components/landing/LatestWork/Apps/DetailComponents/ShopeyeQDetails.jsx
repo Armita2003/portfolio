@@ -20,7 +20,6 @@ export default function ShopeyeQDetails() {
                     "Field sales representatives in FMCG face challenges such as manual, inefficient task management, and complex navigation between multiple PoS locations. Fragmented data collection leads to inaccuracies, while limited visibility into store performance hinders quick identification of stock issues. Additionally, the lack of real-time insights and upselling recommendations results in missed opportunities, slowing response times and reducing overall efficiency.",
                 ]}
                 percentages={Percentages}
-                image={null}
                 gapSize={8}
                 paddingSize={5}
             />
@@ -30,8 +29,6 @@ export default function ShopeyeQDetails() {
                     "We analyzed competitors to identify gaps in FMCG field sales tools, focusing on task management, navigation, and product scanning. While platforms like Salesforce excel in navigation and task breakdown, none offer robust product scanning or break time management.",
                     "These insights guided us to design a solution that integrates PoS history, efficient scanning, and unique features to streamline workflows and boost productivity.",
                 ]}
-                percentages={null}
-                image={null}
                 gapSize={8}
                 paddingSize={5}
             />
@@ -48,7 +45,6 @@ export default function ShopeyeQDetails() {
                     "This survey clearly indicated that field sales representatives face significant challenges with their current tools, particularly in managing reporting and inventory. The majority of respondents expressed a strong preference for an app that integrates these tasks into one platform with real-time data access.",
                     "These insights have guided the direction for the redesign of the sales representative app, ensuring that it addresses the key pain points and needs identified by the users. The findings will directly inform the wireframes and the user flow, focusing on streamlining tasks and improving the overall usability of the app.",
                 ]}
-                image={null}
                 gapSize={8}
                 paddingSize={10}
             />
@@ -59,8 +55,7 @@ export default function ShopeyeQDetails() {
                     "Jason’s role involves navigating multiple PoS locations, scanning products, tracking stock discrepancies, and sharing results. His challenges include time-consuming manual processes and lack of integration with tools like CRM systems.",
                     "Our goal was to design a solution that simplifies Jason’s workflow, automates data entry, and enables seamless integration with third-party tools. By focusing on Jason’s needs, we ensured our design would address real-world pain points, improving efficiency and productivity for field sales representatives.",
                 ]}
-                percentages={null}
-                image="/Container.png"
+                image="/AppImages/Container.png"
                 gapSize={8}
             />
             <DetailsSection
@@ -68,11 +63,10 @@ export default function ShopeyeQDetails() {
                 subtexts={[
                     "To support the sales representatives' goals and improve their efficiency, we created user flows for the Store check app that streamline the entire sales process. The app allows representatives to easily receive task lists from supervisors and access optimized routes to different points of sale (PoS), helping them navigate efficiently.",
                     "We also designed flows for starting product scanning sessions at PoS locations. Representatives can generate a positive list of available products and a negative list highlighting missing or out-of-stock items by comparing scanned products with the PoS portfolio. Additionally, we incorporated the ability to calculate the delta number, showing discrepancies between the expected and actual product availability.",
-                    ,
+
                     "To ensure flexibility, the app allows representatives to revisit and rescan products in multiple sessions, providing accuracy in data collection. The app also enables sharing session results with CRM software for seamless data integration and analysis, and it suggests up-selling opportunities based on AI-powered product recognition, helping sales reps engage customers and increase sales.",
                 ]}
-                percentages={null}
-                image="/Diagram.png"
+                image="/AppImages/Diagram.png"
                 gapSize={8}
                 paddingSize={10}
             />
@@ -81,8 +75,7 @@ export default function ShopeyeQDetails() {
                 subtexts={[
                     "To create a seamless and intuitive experience for the Sales Representative app, we designed wireframes that mapped out key user flows. These wireframes capture essential functionalities such as task management, navigation to Points of Sale (PoS), product scanning, and data sharing. Each screen is crafted to prioritize usability, ensuring quick access to information, efficient workflows, and smooth integration with external systems like CRM and calendar tools. The wireframes served as the foundation for validating design decisions and aligning user needs with business goals before moving to high-fidelity designs.",
                 ]}
-                percentages={null}
-                image="/WireFrame.png"
+                image="/AppImages/WireFrame.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -91,8 +84,7 @@ export default function ShopeyeQDetails() {
                 subtexts={[
                     "The low-fidelity wireframes provided an initial blueprint for the app’s design, focusing on core layout, structure, and navigation without visual distractions. These wireframes emphasized functionality, allowing us to map out essential user interactions such as task lists, PoS navigation, product scanning, and CRM integration. By maintaining simplicity, we were able to iterate quickly, test usability concepts, and gather feedback to ensure the design met the needs of sales representatives efficiently. This stage was critical in refining the app’s workflow before progressing to high-fidelity prototypes.",
                 ]}
-                percentages={null}
-                image="/LowFidelityWireFrames.png"
+                image="/AppImages/LowFidelityWireFrames.png"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -101,14 +93,12 @@ export default function ShopeyeQDetails() {
                 subtexts={[
                     "Building upon the insights gained from the low-fidelity wireframes, the high-fidelity wireframes incorporate visual design elements, branding, and interactive components to provide a realistic representation of the final product. This stage focuses on fine-tuning details such as typography, color schemes, iconography, and user interface consistency. Additionally, clickable prototypes are created to simulate user interactions, enabling us to validate workflows and gather more targeted feedback from stakeholders and potential users.",
                 ]}
-                percentages={null}
-                image={null}
                 gapSize={8}
                 paddingSize={5}
             />
             <Stack pt={SmallScreen ? 2.5 : 5} pb={SmallScreen ? 5 : 10}>
                 <Stack position="relative" display="inline-block" direction="column">
-                    <img src="/HighFidelityWireFrames.png" alt="High-Fidelity Wireframes: Refining the Vision" style={{ width: "100%" }} />
+                    <img src="/AppImages/HighFidelityWireFrames.png" alt="High-Fidelity Wireframes: Refining the Vision" style={{ width: "100%" }} />
                     <Button
                         variant="text"
                         onClick={handleNavigate}
