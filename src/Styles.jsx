@@ -371,7 +371,6 @@ export const Skills = [
 export const WorkDetailContainer = styled(Stack)(({ theme, prop }) => ({
     backgroundColor: prop,
     maxWidth: "100%",
-    // height: 832,
     height: "100%",
     padding: "80px !important",
     [theme.breakpoints.down("md")]: {
@@ -397,11 +396,11 @@ export const WorkDetailLandingBox = styled(Stack)(({ theme }) => ({
     },
 }));
 
-export const WorkDetailLandingHeaderText = styled(Typography)(({ theme }) => ({
+export const WorkDetailLandingHeaderText = styled(Typography)(({ theme, color }) => ({
     fontFamily: `'Satoshi', sans-serif`,
     fontWeight: 700,
     fontSize: 46,
-    color: "white",
+    color: color,
     lineHeight: "64.8px",
     [theme.breakpoints.down("lg")]: {
         fontSize: 35,
@@ -420,11 +419,11 @@ export const WorkDetailLandingHeaderText = styled(Typography)(({ theme }) => ({
     },
 }));
 
-export const WorkDetailLandingHeaderSubText = styled(Typography)(({ theme }) => ({
+export const WorkDetailLandingHeaderSubText = styled(Typography)(({ theme, color }) => ({
     fontFamily: `'Satoshi', sans-serif`,
     fontWeight: 400,
     fontSize: 20,
-    color: "#EEF2FF",
+    color: color,
     [theme.breakpoints.down("lg")]: {
         fontSize: 18,
         width: "100%",
@@ -432,11 +431,10 @@ export const WorkDetailLandingHeaderSubText = styled(Typography)(({ theme }) => 
     [theme.breakpoints.down("md")]: {
         fontSize: 16,
         lineHeight: "28.4px",
-        // width: "100%",
     },
     [theme.breakpoints.down("sm")]: {
         fontSize: 16,
-        lineHeight: "24.4px",
+        lineHeight: "22.4px",
     },
 }));
 
@@ -478,6 +476,22 @@ export const BoldSubDetailsTypography = styled(Typography)(({ theme }) => ({
     fontSize: 20,
     lineHeight: "26px",
     color: "#111111",
+    [theme.breakpoints.down("md")]: {
+        fontSize: 15,
+        lineHeight: "22px",
+    },
+    [theme.breakpoints.down("sm")]: {
+        fontSize: 13,
+        lineHeight: "20px",
+    },
+}));
+export const ListTypography = styled(Typography)(({ theme }) => ({
+    fontFamily: `'Satoshi', sans-serif`,
+    fontWeight: 500,
+    fontSize: 20,
+    lineHeight: "26px",
+    color: "#1F1F1F",
+    paddingBottom: 20,
     [theme.breakpoints.down("md")]: {
         fontSize: 15,
         lineHeight: "22px",
@@ -531,9 +545,70 @@ export const Percentages = [
     { text: "Excessive Time Spent on Travel", number: "35%" },
 ];
 
+export const HuduPercentages = [
+    { text: "abandoned the project-posting", number: "45%" },
+    { text: "struggled to find key features", number: "60%" },
+    { text: "left profiles incomplete", number: "40%" },
+    { text: "drop in daily active users in six months", number: "30%" },
+];
+
+export const YachtOwnersPercentages = [
+    { text: "struggle with maintaining a consistent, well-trained crew", number: "68%" },
+    { text: "report challenges with crew transitions and onboarding", number: "72%" },
+    { text: "spend excessive time on manual crew management tasks", number: "25%" },
+];
+
+export const CrewMembersPercentages = [
+    { text: "of crew members are dissatisfied with traditional job management systems", number: "40%" },
+    { text: "of crew members feel disconnected from the yachting community", number: "33%" },
+    { text: "of crew members report lost job opportunities due to scheduling conflicts", number: "20%" },
+];
+
+export const ImprovingUsabilityList = [
+    "Advanced Filtering Options: Introduce enhanced filtering to refine job searches based on yacht type, location, duration, pay, or specific crew requirements. This ensures users quickly find opportunities that match their preferences.",
+    "Measuring Platform Value: Develop tools to track application success rates, response times, and interview outcomes. For yacht owners, analyze metrics such as time saved in recruitment and quality of hires. This helps users understand the tangible value YATYAP provides.",
+    "Enhanced Data Visualization: Offer dashboards for both crew and yacht owners, displaying insights like job history, average hire success, or career progress to aid in better decision-making.",
+    "Personalized Recommendations: Implement algorithms tailored to user profiles, previous job activity, and preferences, enabling personalized job suggestions for crew and ideal candidate recommendations for yacht owners.",
+];
+
+export const UserInterviewList = [
+    "Identifying key factors that motivate users to choose HUDU for their job postings or service browsing",
+    "Discovering pain points users face when posting jobs, browsing through listings, or managing profiles",
+    "Understanding what makes a seamless, efficient user experience on HUDU",
+    "Evaluating competitors’ strengths and weaknesses from the users' perspective, and how HUDU could differentiate itself",
+];
+
+export const HomeRedesignOutcome = [
+    "Enlarged Images significantly enhanced visual engagement and made the homepage more appealing.",
+    "Displayed Location Data was clear and helped users quickly find projects relevant to their geographic preferences.",
+    "Map Feature was intuitive and highly appreciated, enabling users to explore projects based on location seamlessly.",
+    "Filter and Sort Options were effective in reducing the time taken to locate desired projects, improving overall navigation efficiency.",
+];
+
+export const ProjectRedesignOutcome = [
+    "Breaking the process into five distinct steps reduced user overwhelm and improved clarity.",
+    "Contextual guidance at each step made the process more intuitive and less intimidating.",
+    "Redesigned input fields improved usability and streamlined the user flow.",
+    "The dedicated questions section empowered Listers to make informed decisions, ensuring better Doer matches.",
+];
+
+export const ProfileRedesignOutcome = [
+    "The new layout, with clearly defined sections, made the profile easier to navigate and visually appealing.",
+    "Relevant user information was highlighted, reducing the need for excessive clicking and improving access to key details.",
+    "A prominent banner encouraged background check upgrades, resulting in a 12% increase in upgrades.",
+    "The breakdown of information into sections reduced friction, enabling users to find the data they needed quickly and efficiently.",
+];
+
+export const ReflectionsList = [
+    "Adoption of New Features: While the introduction of features like the map view and the redesigned project listing flow received positive feedback, monitoring long-term engagement is essential to ensure users continue to leverage these tools effectively. For instance, ensuring that users actively utilize the map view and sorting options can validate the redesign’s success.",
+    "Profile Interactions: The new profile design aims to make information accessible and visually engaging. However, further analysis is needed to determine how these changes influence decision-making, such as whether the banner for background checks encourages genuine trust-building or simply drives financial gains.",
+    "User Behavior Trends: Understanding how users navigate and interact with the app in the long term is crucial. For example, tracking which features see consistent engagement and whether any areas of the app remain underutilized can guide iterative updates.",
+    "Diverse User Needs: As HUDU continues to grow, considering the diverse needs of users across regions, professions, and technical proficiency levels will be key. Ensuring inclusivity in design and functionality will help maintain broad user satisfaction.",
+];
+
 export const SurveyPercentages = [
     { text: "Find reporting tasks most time-consuming", number: "63%" },
-    { text: "Satisfaction with Current Apps in the Market ", number: "42%" },
+    { text: "satisfaction with current apps in the Market ", number: "42%" },
     { text: "of users find real-time data access crucial", number: "85%" },
 ];
 

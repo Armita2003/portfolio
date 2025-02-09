@@ -2,7 +2,7 @@ import useResponsive from "@/hooks/useResponsive";
 import { WorkDetailContainer, WorkDetailLandingBox, WorkDetailLandingHeaderSubText, WorkDetailLandingHeaderText } from "@/Styles";
 import { Box, Stack } from "@mui/material";
 
-export default function AppDetails({ backgroundImageUrl, appImage, logoComponent, title, infoText }) {
+export default function AppDetails({ backgroundImageUrl, appImage, logoComponent, title, infoText, textColor, subTextColor }) {
     const SmallScreen = useResponsive("down", "md");
     const MediumScreen = useResponsive("down", "lg");
     return (
@@ -25,10 +25,10 @@ export default function AppDetails({ backgroundImageUrl, appImage, logoComponent
                 </Stack>
                 <Stack gap={3}>
                     <Stack>
-                        <WorkDetailLandingHeaderText>{title}</WorkDetailLandingHeaderText>
+                        <WorkDetailLandingHeaderText color={textColor}>{title}</WorkDetailLandingHeaderText>
                     </Stack>
-                    <Stack width={MediumScreen ? "100%" : 699} height={SmallScreen ? "100%" : 135}>
-                        <WorkDetailLandingHeaderSubText>{infoText}</WorkDetailLandingHeaderSubText>
+                    <Stack maxWidth="100%" width={MediumScreen ? "100%" : 720} height={SmallScreen ? "100%" : 135}>
+                        <WorkDetailLandingHeaderSubText color={subTextColor}>{infoText}</WorkDetailLandingHeaderSubText>
                     </Stack>
                 </Stack>
             </WorkDetailLandingBox>
@@ -51,9 +51,9 @@ export default function AppDetails({ backgroundImageUrl, appImage, logoComponent
                         src={`/WorkDetail/${appImage}`}
                         alt="Work Detail"
                         style={{
-                            width: SmallScreen ? "90%" : "542px",
-                            height: "auto", // Maintain aspect ratio
-                            maxWidth: "100%", // Prevent overflow
+                            width: SmallScreen ? "90%" : "600px",
+                            height: "auto",
+                            maxWidth: "100%",
                             maxHeight: "100%",
                             display: "block",
                         }}

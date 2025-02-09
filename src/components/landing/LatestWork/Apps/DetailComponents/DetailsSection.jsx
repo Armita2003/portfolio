@@ -1,8 +1,28 @@
 import useResponsive from "@/hooks/useResponsive";
-import { BoldSubDetailsTypography, DetailsTypography, SubDetailsTypography, WorkDetailPercentages, WorkDetailSubTextPercentages } from "@/Styles";
+import {
+    BoldSubDetailsTypography,
+    DetailsTypography,
+    ListTypography,
+    SubDetailsTypography,
+    WorkDetailPercentages,
+    WorkDetailSubTextPercentages,
+} from "@/Styles";
 import { Grid, Stack } from "@mui/material";
 
-export const DetailsSection = ({ title, boldSubText, subtexts, secondSubtexts, percentages, image, gapSize, paddingSize }) => {
+export const DetailsSection = ({
+    title,
+    boldSubText,
+    subtexts,
+    secondSubtexts,
+    percentages,
+    image,
+    gapSize,
+    paddingSize,
+    list,
+    textAfterList,
+    textAfterImage,
+    secondImage,
+}) => {
     const SmallScreen = useResponsive("down", "md");
     const MediumScreen = useResponsive("down", "lg");
 
@@ -15,6 +35,16 @@ export const DetailsSection = ({ title, boldSubText, subtexts, secondSubtexts, p
                         <SubDetailsTypography key={index}>{text}</SubDetailsTypography>
                     ))}
                     {boldSubText && <BoldSubDetailsTypography>{boldSubText}</BoldSubDetailsTypography>}
+                    {list && (
+                        <ul>
+                            {list.map((items) => (
+                                <li>
+                                    <ListTypography>{items}</ListTypography>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
+                    {textAfterList && textAfterList.map((text, index) => <SubDetailsTypography key={index}>{text}</SubDetailsTypography>)}
                 </Stack>
                 {percentages && (
                     <Grid container justifyContent="space-around" rowGap={3}>
@@ -44,6 +74,9 @@ export const DetailsSection = ({ title, boldSubText, subtexts, secondSubtexts, p
                     </Stack>
                 )}
                 {image && <img src={image} alt={title} />}
+                {textAfterImage && textAfterImage.map((text, index) => <SubDetailsTypography key={index}>{text}</SubDetailsTypography>)}
+
+                {secondImage && <img src={secondImage} alt={title} />}
             </Stack>
         </Stack>
     );

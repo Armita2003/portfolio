@@ -1,7 +1,7 @@
 import { TableColumnText, TableHeaderText, TableRowText } from "@/Styles";
 import { Box, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, useMediaQuery } from "@mui/material";
-import { CrossCheckIcon } from "../../../../../../public/Icons/CrossCheckIcon";
-import { TickedCheckIcon } from "../../../../../../public/Icons/TickedCheckIcon";
+import { CrossCheckIcon } from "../../../../../../../public/Icons/CrossCheckIcon";
+import { TickedCheckIcon } from "../../../../../../../public/Icons/TickedCheckIcon";
 
 const rows = [
     { name: "Navigation", first: <CrossCheckIcon />, second: <TickedCheckIcon />, third: <TickedCheckIcon />, forth: <TickedCheckIcon /> },
@@ -14,7 +14,7 @@ const rows = [
     { name: "Offline Functionality", first: <TickedCheckIcon />, second: <TickedCheckIcon />, third: "Limited", forth: "Limited" },
 ];
 
-export default function ResponsiveFeatureTable() {
+export default function FeatureTable() {
     const isSmallScreen = useMediaQuery("(max-width: 1200px)");
     const isExtraSmallScreen = useMediaQuery("(max-width: 600px)");
     return (

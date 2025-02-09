@@ -1,16 +1,24 @@
-import { useEffect, useState } from "react";
-import { LoadingIcon } from "../../../../../public/Icons/LoadingIcon";
+import useResponsive from "@/hooks/useResponsive";
+import { Container } from "@mui/material";
+import AppDetails from ".";
+import { YatYapLogo } from "../../../../../public/Icons/WorkLogos/YatYapLogo";
+import YatYapDetails from "./DetailComponents/YatYapDetails";
+
 export function YatYap() {
-    const [loading, setLoading] = useState(true);
+    const SmallScreen = useResponsive("down", "md");
 
-    useEffect(() => {
-        // Simulate a delay (e.g., fetching data or waiting for page to load)
-        const timer = setTimeout(() => {
-            setLoading(false);
-        }, 2000); // Change delay as needed
-
-        return () => clearTimeout(timer);
-    }, []);
-
-    return loading ? <LoadingIcon /> : <h1>YatYap</h1>;
+    return (
+        <Container maxWidth="xl" sx={{ padding: "0px !important" }}>
+            <AppDetails
+                appImage="WorkDetail3.png"
+                title="Friends Onboard"
+                infoText="Finding reliable crew members and managing bookings in the yachting industry can be inefficient. YATYAP streamlines this process, offering yacht owners and crew a seamless platform to connect, post jobs, and handle payments securely. With personalized profiles and advanced search features, YATYAP simplifies crew management, making it the go-to solution for the global yachting community."
+                backgroundImageUrl="WorkDetail/Background3.png"
+                textColor="#FFFFFF"
+                subTextColor="#EEF2FF"
+                logoComponent={<YatYapLogo width={SmallScreen ? 114.5 : 229} height={SmallScreen ? 43 : 86} />}
+            />
+            <YatYapDetails />
+        </Container>
+    );
 }

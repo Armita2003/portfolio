@@ -2,10 +2,10 @@ import useResponsive from "@/hooks/useResponsive";
 import { Percentages, PrototypeButtonText, SurveyPercentages } from "@/Styles";
 import { Button, Container, Stack } from "@mui/material";
 import { useRouter } from "next/router";
-import { DetailsSection } from "../DetailComponents";
-import FeatureTable from "./FeatureTable";
+import { DetailsSection } from "./DetailsSection";
+import FeatureTable from "./ShopeyeQDetails/FeatureTable";
 
-export default function Details() {
+export default function ShopeyeQDetails() {
     const SmallScreen = useResponsive("down", "md");
     const router = useRouter();
 
