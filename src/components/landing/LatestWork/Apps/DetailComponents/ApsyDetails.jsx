@@ -100,7 +100,7 @@ export default function ApsyDetails() {
             <Stack pt={SmallScreen ? 2.5 : 5} pb={SmallScreen ? 5 : 10}>
                 <Stack position="relative" display="inline-block" direction="column">
                     <img src="/AppImages/ApsyPrototype.png" alt="Improving Onboarding: Implementing Tutorials" style={{ width: "100%" }} />
-                    <Link href="/Work/ShopeyeQ/Prototype" target="_blank" passHref>
+                    <Link href="/Work/Apsy/Prototype" target="_blank" passHref>
                         <Button
                             variant="text"
                             sx={{
