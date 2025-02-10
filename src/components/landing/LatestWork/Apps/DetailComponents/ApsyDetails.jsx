@@ -9,17 +9,13 @@ import {
     UserQuotesList,
 } from "@/Styles";
 import { Button, Container, Stack } from "@mui/material";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { LandingPageRedesign } from "../../../../../../public/Icons/LandingPageRedesign";
 import { StreamliningEmailCommunication } from "../../../../../../public/Icons/StreamliningEmailCommunication";
 import { DetailsSection } from "./DetailsSection";
 
 export default function ApsyDetails() {
     const SmallScreen = useResponsive("down", "md");
-    const router = useRouter();
-    const handleNavigate = () => {
-        router.push(`/Work/Apsy/Prototype`);
-    };
 
     return (
         <Container maxWidth="xl" sx={{ padding: SmallScreen ? "30px !important" : "80px !important" }}>
@@ -104,18 +100,19 @@ export default function ApsyDetails() {
             <Stack pt={SmallScreen ? 2.5 : 5} pb={SmallScreen ? 5 : 10}>
                 <Stack position="relative" display="inline-block" direction="column">
                     <img src="/AppImages/ApsyPrototype.png" alt="Improving Onboarding: Implementing Tutorials" style={{ width: "100%" }} />
-                    <Button
-                        variant="text"
-                        onClick={handleNavigate}
-                        sx={{
-                            position: "absolute",
-                            top: "50%",
-                            left: "50%",
-                            transform: "translate(-50%, -50%)",
-                        }}
-                    >
-                        <PrototypeButtonText>Try the prototype</PrototypeButtonText>
-                    </Button>
+                    <Link href="/Work/ShopeyeQ/Prototype" target="_blank" passHref>
+                        <Button
+                            variant="text"
+                            sx={{
+                                position: "absolute",
+                                top: "50%",
+                                left: "50%",
+                                transform: "translate(-50%, -50%)",
+                            }}
+                        >
+                            <PrototypeButtonText>Try the prototype</PrototypeButtonText>
+                        </Button>
+                    </Link>
                 </Stack>
             </Stack>
             <DetailsSection
