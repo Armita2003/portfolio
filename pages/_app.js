@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import localFont from "next/font/local";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { LoadingIcon } from "../public/Icons/LoadingIcon";
-
 const ppHatton = localFont({
     // src: "../public/fonts/hatton/PPHatton-Medium.otf",
     src: [
@@ -74,7 +74,9 @@ export default function App({ Component, pageProps }) {
                 <title>{getPageTitle()}</title>
                 <link rel="icon" type="image/svg+xml" href="/logo.svg" />
             </Head>
-            <main className={`${ppHatton.variable} ${satoshi.variable}`}>{getLayout(<Component {...pageProps} />)}</main>
+            <main className={`${ppHatton.variable} ${satoshi.variable}`}>
+                {getLayout(<Component {...pageProps} />)} <SpeedInsights />
+            </main>
         </>
     );
 }
