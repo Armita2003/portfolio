@@ -2,7 +2,6 @@ import useResponsive from "@/hooks/useResponsive";
 import { Tags, TagTypography } from "@/Styles";
 import { Stack } from "@mui/material";
 import RecentAdventures from "../RecentAdventures";
-import Footer from "../RecentAdventures/Footer";
 import LatestWorkGrid from "./LatestWorkGrid";
 
 export default function LatestWork() {
@@ -17,7 +16,6 @@ export default function LatestWork() {
             </Tags>
             <LatestWorkGrid />
             <RecentAdventures />
-            <Footer />
         </Stack>
     );
 }

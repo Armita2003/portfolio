@@ -23,15 +23,14 @@ export function Header() {
         localStorage.setItem("activeLink", link);
     };
 
-    const handleTabClick = () => {
-        router.push(`/Resume`);
+    const handleButtonClick = () => {
+        window.open("/Resume.pdf", "_blank");
     };
 
     const isSmallScreen = useResponsive("down", "md");
     return (
         <Stack mb={isSmallScreen ? "50px" : "100px"} direction="row" justifyContent="space-between">
             <Stack direction="row" gap={isSmallScreen ? 1 : 2}>
-                {/* <img width={isSmallScreen ? 20 : 24} height={isSmallScreen ? 20 : 24} src="./logo.jpg" /> */}
                 <Stack width={isSmallScreen ? 20 : 24} height={isSmallScreen ? 20 : 24}>
                     <Logo />
                 </Stack>
@@ -52,7 +51,7 @@ export function Header() {
                     sx={{ cursor: "pointer" }}
                     onClick={() => {
                         handleClick("Resume");
-                        handleTabClick();
+                        handleButtonClick();
                     }}
                     className={`headerSubLinks ${activeLink === "Resume" ? "active" : ""}`}
                 >

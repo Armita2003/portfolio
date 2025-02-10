@@ -38,7 +38,7 @@ export default function LandingFirstSlide() {
                             style={{
                                 width: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
                                 height: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
-
+                                maxWidth: "527px",
                                 margin: "auto",
                             }}
                             src="/ProfilePic.png"

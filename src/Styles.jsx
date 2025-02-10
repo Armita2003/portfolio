@@ -133,12 +133,16 @@ export const FooterButton = styled(Button)(({}) => ({
     textTransform: "none",
 }));
 
-export const FooterButtonText = styled(Typography)(({}) => ({
+export const FooterButtonText = styled(Typography)(({ theme }) => ({
     height: 33,
     fontFamily: ` var(--font-pphatton), serif`,
     fontWeight: 700,
     fontSize: 20,
     lineHeight: "33.22px",
+    [theme.breakpoints.between("sm", "md")]: {
+        fontWeight: 500,
+        fontSize: 18,
+    },
 }));
 
 export const ResumeBody = styled(Container)(({}) => ({

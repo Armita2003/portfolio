@@ -1,3 +1,4 @@
+import Footer from "../footer";
 import { Header } from "../header";
 import LandingFirstSlide from "./LandingFirstSlide";
 import LatestWork from "./LatestWork";
@@ -8,6 +9,7 @@ export function Landing() {
             <Header />
             <LandingFirstSlide />
             <LatestWork />
+            <Footer />
         </>
     );
 }
