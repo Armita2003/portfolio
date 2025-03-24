@@ -27,6 +27,7 @@ export default function ApsyDetails() {
                     "This analysis highlighted the need for a comprehensive UX redesign to improve clarity, guide users through the app-building process, and reduce friction at every stage.",
                 ]}
                 percentages={ProblemStatementPercentages}
+                percentagesColor="#00B9FF"
                 gapSize={8}
                 paddingSize={5}
             />

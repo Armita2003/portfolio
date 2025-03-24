@@ -14,6 +14,7 @@ export default function YatYapDetails() {
                     "Managing a yacht comes with significant challenges, particularly when it comes to maintaining an efficient crew and organizing bookings. Many yacht owners face issues with outdated recruitment methods, leading to prolonged hiring processes and high crew turnover rates. Additionally, disruptions during crew transitions and onboarding exacerbate inefficiencies, with 72% of owners reporting such difficulties. The lack of a centralized communication and booking system further adds to the complexity, making it hard to optimize yacht operations. YATYAP provides a solution by centralizing these processes, reducing time spent on manual management by 25%, improving communication, and enabling better crew retention. This modern approach helps yacht owners achieve smoother and more cost-effective operations.",
                 ]}
                 percentages={YachtOwnersPercentages}
+                percentagesColor="#047882"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -23,6 +24,7 @@ export default function YatYapDetails() {
                     "Crew members in the yachting industry often struggle with limited visibility and networking opportunities, leaving many dissatisfied with traditional job management systems. A significant 40% of crew members find these systems ineffective in providing timely and relevant job information, while 33% feel isolated from the yachting community, hindering career advancement. Moreover, 25% of crew members report lost job opportunities due to scheduling conflicts and poor communication, further compounding their career challenges. These inefficiencies highlight the need for better connectivity and transparency within the industry.",
                 ]}
                 percentages={CrewMembersPercentages}
+                percentagesColor="#047882"
                 gapSize={8}
                 paddingSize={5}
             />

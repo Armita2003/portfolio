@@ -17,6 +17,7 @@ export default function HuduDetails() {
                     "Users of HUDU faced significant challenges due to a cluttered interface and overwhelming design. A lengthy project-posting process left users stuck, while a disorganized profile layout made it difficult to find and use key features. The absence of incentives further discouraged active participation. These issues collectively contributed to a lackluster user experience and diminished user retention.",
                 ]}
                 percentages={HuduPercentages}
+                percentagesColor="#2F63FE"
                 gapSize={8}
                 paddingSize={5}
             />

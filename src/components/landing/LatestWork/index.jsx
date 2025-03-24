@@ -8,7 +8,7 @@ export default function LatestWork() {
     const isSmallScreen = useResponsive("down", "md");
     return (
         <Stack mt={isSmallScreen ? 8 : 19.6} gap={3}>
-            <Tags width={116} height={36}>
+            <Tags width={92} height={15}>
                 <TagTypography width={92} height={15} color="black">
                     Latest
                     <span style={{ color: "#8C404E" }}> Works</span>

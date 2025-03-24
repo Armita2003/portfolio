@@ -1,5 +1,5 @@
 import useResponsive from "@/hooks/useResponsive";
-import { Percentages, PrototypeButtonText, SurveyPercentages } from "@/Styles";
+import { Percentages, PrototypeButtonText, ShopeyeQFinalThoughtsList, ShopeyeQReflectionsList, SurveyPercentages } from "@/Styles";
 import { Button, Container, Stack } from "@mui/material";
 import Link from "next/link";
 import { DetailsSection } from "./DetailsSection";
@@ -16,6 +16,7 @@ export default function ShopeyeQDetails() {
                     "Field sales representatives in FMCG face challenges such as manual, inefficient task management, and complex navigation between multiple PoS locations. Fragmented data collection leads to inaccuracies, while limited visibility into store performance hinders quick identification of stock issues. Additionally, the lack of real-time insights and upselling recommendations results in missed opportunities, slowing response times and reducing overall efficiency.",
                 ]}
                 percentages={Percentages}
+                percentagesColor="#3950FF"
                 gapSize={8}
                 paddingSize={5}
             />
@@ -37,6 +38,7 @@ export default function ShopeyeQDetails() {
                 ]}
                 boldSubText="Below are some key findings from the surveys:"
                 percentages={SurveyPercentages}
+                percentagesColor="#3950FF"
                 secondSubtexts={[
                     "This survey clearly indicated that field sales representatives face significant challenges with their current tools, particularly in managing reporting and inventory. The majority of respondents expressed a strong preference for an app that integrates these tasks into one platform with real-time data access.",
                     "These insights have guided the direction for the redesign of the sales representative app, ensuring that it addresses the key pain points and needs identified by the users. The findings will directly inform the wireframes and the user flow, focusing on streamlining tasks and improving the overall usability of the app.",
@@ -110,6 +112,28 @@ export default function ShopeyeQDetails() {
                     </Link>
                 </Stack>
             </Stack>
+            <DetailsSection
+                title="Reflections"
+                subtexts={[
+                    "Designing the ShopeyeQ Sales Representative App was a complex yet rewarding challenge, offering valuable insights into the intersection of user needs, business goals, and technology-driven solutions. The project emphasized the importance of user-centered design, data-driven decision-making, and seamless integrations to enhance the efficiency of field sales representatives.",
+                ]}
+                list={ShopeyeQReflectionsList}
+                gapSize={8}
+                paddingSize={5}
+            />
+            <DetailsSection
+                title="Final Thoughts & Future Improvements"
+                subtexts={[
+                    "While the redesigned ShopeyeQ Sales Representative App successfully addressed many pain points, there is always room for iteration and growth. User feedback and continuous usability testing will play a crucial role in refining the product post-launch.",
+                    "Looking forward, potential improvements could include:",
+                ]}
+                list={ShopeyeQFinalThoughtsList}
+                textAfterList={[
+                    "This project reinforced the importance of data-driven, user-centered design, proving that seamless automation and intuitive UX can dramatically improve field sales efficiency. The insights gained here will continue to inform future innovations in B2B sales tech solutions.",
+                ]}
+                gapSize={8}
+                paddingSize={5}
+            />
         </Container>
     );
 }

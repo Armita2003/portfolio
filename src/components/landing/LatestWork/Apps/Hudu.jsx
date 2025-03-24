@@ -15,6 +15,10 @@ export function Hudu() {
                 backgroundImageUrl="WorkDetail/Background2.png"
                 textColor="#1F1F1F"
                 subTextColor="#111111"
+                IconButtonsLogo={[
+                    { logo: "/WorkDetail/appleLogo.png", link: "https://apps.apple.com/us/app/hudu/id1659522492" },
+                    { logo: "/WorkDetail/googlePlayLogo.png", link: "https://play.google.com/store/apps/details?id=com.heyhudu.HUDU&hl=en_GB" },
+                ]}
                 logoComponent={<HuduLogo width={SmallScreen ? 80.21 : 160.42} height={35} />}
             />
             <HuduDetails />

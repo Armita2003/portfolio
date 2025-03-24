@@ -1,17 +1,14 @@
 import useResponsive from "@/hooks/useResponsive";
 import { LatestWorkContainers, LatestWorkHoverText, LatestWorkRoleTypography, LatestWorkTitleTypography, Works } from "@/Styles";
 import { Box, Grid, Stack } from "@mui/material";
-import { useRouter } from "next/router";
 
 export default function LatestWorkGrid() {
     const ExtraSmallScreen = useResponsive("down", "sm");
     const SmallScreen = useResponsive("down", "md");
-    const MediumScreen = useResponsive("down", "lg");
 
-    const router = useRouter();
-
-    const handleCardClick = (name) => {
-        router.push(`/Work/${encodeURIComponent(name)}`);
+    const handleCardClick = (name, e) => {
+        e.preventDefault();
+        window.open(`/Work/${encodeURIComponent(name)}`, "_blank");
     };
 
     return (
@@ -21,7 +18,9 @@ export default function LatestWorkGrid() {
                     return (
                         <Grid key={index} item xs={12} md={5.8} lg={3.8}>
                             <LatestWorkContainers
-                                onClick={() => handleCardClick(items.name)}
+                                href={`/Work/${encodeURIComponent(items.name)}`}
+                                target="_blank"
+                                onClick={(e) => handleCardClick(items.name, e)}
                                 sx={{
                                     position: "relative",
                                     display: "flex",

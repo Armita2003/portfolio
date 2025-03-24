@@ -145,26 +145,6 @@ export const FooterButtonText = styled(Typography)(({ theme }) => ({
     },
 }));
 
-export const ResumeBody = styled(Container)(({}) => ({
-    position: "relative",
-    width: "100%",
-    height: "100%",
-    backgroundImage: 'url("/ResumeImage.png")',
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    padding: 30,
-    "::before": {
-        content: '""',
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        backgroundColor: "rgba(140, 64, 78, 0.5)",
-    },
-}));
-
 export const ResumeMainBody = styled(Container)(({ theme }) => ({
     position: "relative",
     backgroundColor: "white",
@@ -249,14 +229,12 @@ export const ResumeListTypography = styled(Typography)(({ theme }) => ({
 }));
 
 export const Works = [
-    // { title: "ShopeyeQ", name: "ShopeyeQ", role: "App Design", image: "/LatestWorkImages/LatestWork1.png", color: "rgba(7, 7, 58, 0.5)" },
     {
         title: "ShopeyeQ",
         name: "ShopeyeQ",
         role: "App Design",
         image: "/LatestWorkImages/ShopeyeQPhone.png",
         circle: "/LatestWorkImages/ShopeyeQCircle.png",
-        // color: "rgba(7, 7, 58, 0.5)",
     },
     {
         title: "HUDU",
@@ -264,14 +242,12 @@ export const Works = [
         role: "App Design",
         image: "/LatestWorkImages/HuduPhone.png",
         circle: "/LatestWorkImages/HuduCircle.png",
-        color: "rgba(47, 99, 254, 0.5)",
     },
     {
         title: "Yat Yap",
         name: "Yat-Yap",
         role: "App Design",
         image: "/LatestWorkImages/YatYapPhone.png",
-        color: "linear-gradient(180deg, rgba(4, 120, 130, 0.2) 0%, rgba(4, 120, 130, 0.35) 100%)",
         circle: "/LatestWorkImages/YatYapCircle.png",
     },
     {
@@ -279,7 +255,6 @@ export const Works = [
         name: "WelfLab",
         role: "Landing Page",
         image: "/LatestWorkImages/WelfLaptop.png",
-        color: "rgba(209, 132, 243, 0.5)",
         circle: "/LatestWorkImages/WelfCircle.png",
     },
     {
@@ -287,7 +262,6 @@ export const Works = [
         name: "AppBaker",
         role: "Landing Page",
         image: "/LatestWorkImages/AppBakerLaptop.png",
-        color: "rgba(78, 114, 142, 0.5)",
         circle: "/LatestWorkImages/AppBakerCircle.png",
     },
     {
@@ -295,7 +269,6 @@ export const Works = [
         name: "Apsy",
         role: "UX research / Design",
         image: "/LatestWorkImages/ApsyLaptop.png",
-        color: "rgba(29, 114, 226, 0.5)",
         circle: "/LatestWorkImages/ApsyCircle.png",
     },
 ];
@@ -380,7 +353,7 @@ export const WorkDetailContainer = styled(Stack)(({ theme, prop }) => ({
     [theme.breakpoints.down("md")]: {
         padding: "30px !important",
     },
-    zIndex: -1,
+    // zIndex: -10,
 }));
 
 export const WorkDetailLandingBox = styled(Stack)(({ theme }) => ({
@@ -458,6 +431,7 @@ export const DetailsTypography = styled(Typography)(({ theme }) => ({
         lineHeight: "20px",
     },
 }));
+
 export const SubDetailsTypography = styled(Typography)(({ theme }) => ({
     fontFamily: `'Satoshi', sans-serif`,
     fontWeight: 500,
@@ -474,6 +448,21 @@ export const SubDetailsTypography = styled(Typography)(({ theme }) => ({
         fontWeight: 400,
     },
 }));
+
+export const BackgroundIconButton = styled(Button)(() => ({
+    width: "40px",
+    height: "40px",
+    borderRadius: "8px",
+    border: "1px solid #E5E5E5",
+    backgroundColor: "white",
+    justifyContent: "center",
+    alignItems: "center",
+    cursor: "pointer",
+    padding: 0,
+    zIndex: 1,
+    minWidth: "40px",
+}));
+
 export const BoldSubDetailsTypography = styled(Typography)(({ theme }) => ({
     fontFamily: `'Satoshi', sans-serif`,
     fontWeight: 700,
@@ -489,13 +478,14 @@ export const BoldSubDetailsTypography = styled(Typography)(({ theme }) => ({
         lineHeight: "20px",
     },
 }));
-export const ListTypography = styled(Typography)(({ theme }) => ({
+export const ListTypography = styled(Typography)(({ theme, title }) => ({
     fontFamily: `'Satoshi', sans-serif`,
-    fontWeight: 500,
+    fontWeight: title ? 700 : 500,
     fontSize: 20,
     lineHeight: "26px",
     color: "#1F1F1F",
     paddingBottom: 20,
+    display: "inline",
     [theme.breakpoints.down("md")]: {
         fontSize: 15,
         lineHeight: "22px",
@@ -511,8 +501,7 @@ export const WorkDetailPercentages = styled(Typography)(({ theme }) => ({
     fontWeight: 700,
     fontSize: 72,
     textAlign: "center",
-    color: "#3950FF",
-    // width: 280,
+    // color: "#3950FF",
     height: 79,
     [theme.breakpoints.between("md", "lg")]: {
         fontSize: 62,
@@ -575,103 +564,172 @@ export const ProblemStatementPercentages = [
 ];
 
 export const FuturePlansList = [
-    "Continuously gather user feedback to identify emerging needs and pain points.",
-    "Explore the integration of advanced AI-driven support features, such as a chatbot for instant issue resolution.",
-    "Expand the library of pre-designed model types to cater to a broader range of user needs and industries.",
-    "Further personalize email communication by leveraging behavioral analytics to deliver even more targeted and impactful updates.",
-    "Conduct regular usability testing to ensure the platform evolves in line with user expectations and industry trends.",
+    { desc: "Continuously gather user feedback to identify emerging needs and pain points." },
+    { desc: "Explore the integration of advanced AI-driven support features, such as a chatbot for instant issue resolution." },
+    { desc: "Expand the library of pre-designed model types to cater to a broader range of user needs and industries." },
+    { desc: "Further personalize email communication by leveraging behavioral analytics to deliver even more targeted and impactful updates." },
+    { desc: "Conduct regular usability testing to ensure the platform evolves in line with user expectations and industry trends." },
 ];
 
 export const KeyInsightsList = [
-    "Users spent excessive time navigating the onboarding screen, indicating a lack of clear guidance.",
-    "Drop-offs consistently occurred at points where users were required to make decisions without sufficient context or examples.",
+    { desc: "Users spent excessive time navigating the onboarding screen, indicating a lack of clear guidance." },
+    { desc: "Drop-offs consistently occurred at points where users were required to make decisions without sufficient context or examples." },
 ];
 
 export const UserQuotesList = [
-    "“The platform looks promising but feels overwhelming without clear instructions.”",
-    "“I didn’t know how to preview my app while building it.”",
+    { desc: "“The platform looks promising but feels overwhelming without clear instructions.”" },
+    { desc: "“I didn’t know how to preview my app while building it.”" },
 ];
 
 export const SurveyFeedbackAnalysisList = [
-    "49% of respondents said they didn’t understand the next steps after naming their app.",
-    "35% felt the onboarding process lacked sufficient explanation of features.",
-    "28% wanted more visual or video-based guides.",
+    { desc: "49% of respondents said they didn’t understand the next steps after naming their app." },
+    { desc: "35% felt the onboarding process lacked sufficient explanation of features." },
+    { desc: "28% wanted more visual or video-based guides." },
 ];
 
 export const KeyBehavioralPatternsList = [
-    "High drop-off rates: 49% of users left the process before reaching the “app name” stage.",
-    "Heat-maps: Showed repeated clicks on non-interactive elements, indicating unclear UI design.",
-    "Session replays: Revealed users frequently revisiting the same steps, suggesting uncertainty about completing tasks.",
+    { desc: "High drop-off rates: 49% of users left the process before reaching the “app name” stage." },
+    { desc: "Heat-maps: Showed repeated clicks on non-interactive elements, indicating unclear UI design." },
+    { desc: "Session replays: Revealed users frequently revisiting the same steps, suggesting uncertainty about completing tasks." },
 ];
 
 export const MeetingInsightsList = [
-    "Purpose of the Landing Page: Showcase AppBaker’s expertise in delivering digital products, ranging from MVP development to full-scale app solutions, across various industries including tech, healthcare, and e-commerce.",
-    "Target Audience: Businesses seeking to develop custom applications, including startups and enterprises in diverse sectors.",
-    "KPIs: Increase inbound inquiries, enhance brand credibility, boost client engagement, and elevate lead conversion rates.",
-    "Business Objectives: Position AppBaker as a leader in app development, drive project acquisition, and highlight their expertise in delivering secure, high-quality, and scalable digital solutions.",
+    {
+        desc: "Purpose of the Landing Page: Showcase AppBaker’s expertise in delivering digital products, ranging from MVP development to full-scale app solutions, across various industries including tech, healthcare, and e-commerce.",
+    },
+    { desc: "Target Audience: Businesses seeking to develop custom applications, including startups and enterprises in diverse sectors." },
+    { desc: "KPIs: Increase inbound inquiries, enhance brand credibility, boost client engagement, and elevate lead conversion rates." },
+    {
+        desc: "Business Objectives: Position AppBaker as a leader in app development, drive project acquisition, and highlight their expertise in delivering secure, high-quality, and scalable digital solutions.",
+    },
 ];
 
 export const SeamlessInformationArchitectureList = [
-    "Technologies: Categorized into foundational tech stacks (Mobile, Backend, Big Data) and advanced capabilities (AI, AR, Cloud), these sections align technical expertise with specific industries like Healthcare, Media, and Smart Cities.",
-    "Services: Featuring UI/UX Design, DevOps, Product Development, and more, this pillar emphasizes AppBaker’s ability to provide tailored, end-to-end solutions for diverse business needs.",
-    "Supporting Sections: Additional areas, including Projects, Insights, Careers, and About Us, offer users a deeper understanding of AppBaker’s expertise, culture, and thought leadership.",
+    {
+        desc: "Technologies: Categorized into foundational tech stacks (Mobile, Backend, Big Data) and advanced capabilities (AI, AR, Cloud), these sections align technical expertise with specific industries like Healthcare, Media, and Smart Cities.",
+    },
+    {
+        desc: "Services: Featuring UI/UX Design, DevOps, Product Development, and more, this pillar emphasizes AppBaker’s ability to provide tailored, end-to-end solutions for diverse business needs.",
+    },
+    {
+        desc: "Supporting Sections: Additional areas, including Projects, Insights, Careers, and About Us, offer users a deeper understanding of AppBaker’s expertise, culture, and thought leadership.",
+    },
 ];
 
 export const ImprovingUsabilityList = [
-    "Advanced Filtering Options: Introduce enhanced filtering to refine job searches based on yacht type, location, duration, pay, or specific crew requirements. This ensures users quickly find opportunities that match their preferences.",
-    "Measuring Platform Value: Develop tools to track application success rates, response times, and interview outcomes. For yacht owners, analyze metrics such as time saved in recruitment and quality of hires. This helps users understand the tangible value YATYAP provides.",
-    "Enhanced Data Visualization: Offer dashboards for both crew and yacht owners, displaying insights like job history, average hire success, or career progress to aid in better decision-making.",
-    "Personalized Recommendations: Implement algorithms tailored to user profiles, previous job activity, and preferences, enabling personalized job suggestions for crew and ideal candidate recommendations for yacht owners.",
+    {
+        desc: "Advanced Filtering Options: Introduce enhanced filtering to refine job searches based on yacht type, location, duration, pay, or specific crew requirements. This ensures users quickly find opportunities that match their preferences.",
+    },
+    {
+        desc: "Measuring Platform Value: Develop tools to track application success rates, response times, and interview outcomes. For yacht owners, analyze metrics such as time saved in recruitment and quality of hires. This helps users understand the tangible value YATYAP provides.",
+    },
+    {
+        desc: "Enhanced Data Visualization: Offer dashboards for both crew and yacht owners, displaying insights like job history, average hire success, or career progress to aid in better decision-making.",
+    },
+    {
+        desc: "Personalized Recommendations: Implement algorithms tailored to user profiles, previous job activity, and preferences, enabling personalized job suggestions for crew and ideal candidate recommendations for yacht owners.",
+    },
 ];
 
 export const HybridCardSortingList = [
-    "Solutions: Organized by industries—Retail, Banking, Social, and E-commerce. Clicking on each reveals relevant projects, which are further clickable for detailed pages.",
-    "Expertise: Grouped by core capabilities—Data Science, Data Engineering, Custom Software, Enterprise Solutions, and Big Data, each displaying use cases.",
-    "Services: Comprehensive service offerings, including Management IT Counseling, Requirements Engineering, Project Audit, Custom Software Development, Solution Integration, Infrastructure Management, Maintenance and Back Office, and Data Engineering.",
-    "Company: Simplified into About Us and Career pages.",
-    "A “Get in Touch” button was added as a separate, prominent call-to-action for accessibility.",
+    {
+        desc: "Solutions: Organized by industries—Retail, Banking, Social, and E-commerce. Clicking on each reveals relevant projects, which are further clickable for detailed pages.",
+    },
+    {
+        desc: "Expertise: Grouped by core capabilities—Data Science, Data Engineering, Custom Software, Enterprise Solutions, and Big Data, each displaying use cases.",
+    },
+    {
+        desc: "Services: Comprehensive service offerings, including Management IT Counseling, Requirements Engineering, Project Audit, Custom Software Development, Solution Integration, Infrastructure Management, Maintenance and Back Office, and Data Engineering.",
+    },
+    { desc: "Company: Simplified into About Us and Career pages." },
+    { desc: "A “Get in Touch” button was added as a separate, prominent call-to-action for accessibility." },
 ];
 
 export const CompetitiveAnalysisList = [
-    "Gain insights into digital product trends",
-    "Identify the target market and competitors",
-    "Understand how businesses discover and engage with digital solutions",
-    "Evaluate common pain points in digital product development",
+    { desc: "Gain insights into digital product trends" },
+    { desc: "Identify the target market and competitors" },
+    { desc: "Understand how businesses discover and engage with digital solutions" },
+    { desc: "Evaluate common pain points in digital product development" },
 ];
 
 export const UserInterviewList = [
-    "Identifying key factors that motivate users to choose HUDU for their job postings or service browsing",
-    "Discovering pain points users face when posting jobs, browsing through listings, or managing profiles",
-    "Understanding what makes a seamless, efficient user experience on HUDU",
-    "Evaluating competitors’ strengths and weaknesses from the users' perspective, and how HUDU could differentiate itself",
+    { desc: "Identifying key factors that motivate users to choose HUDU for their job postings or service browsing" },
+    { desc: "Discovering pain points users face when posting jobs, browsing through listings, or managing profiles" },
+    { desc: "Understanding what makes a seamless, efficient user experience on HUDU" },
+    { desc: "Evaluating competitors’ strengths and weaknesses from the users' perspective, and how HUDU could differentiate itself" },
 ];
 
 export const HomeRedesignOutcome = [
-    "Enlarged Images significantly enhanced visual engagement and made the homepage more appealing.",
-    "Displayed Location Data was clear and helped users quickly find projects relevant to their geographic preferences.",
-    "Map Feature was intuitive and highly appreciated, enabling users to explore projects based on location seamlessly.",
-    "Filter and Sort Options were effective in reducing the time taken to locate desired projects, improving overall navigation efficiency.",
+    { desc: "Enlarged Images significantly enhanced visual engagement and made the homepage more appealing." },
+    { desc: "Displayed Location Data was clear and helped users quickly find projects relevant to their geographic preferences." },
+    { desc: "Map Feature was intuitive and highly appreciated, enabling users to explore projects based on location seamlessly." },
+    {
+        desc: "Filter and Sort Options were effective in reducing the time taken to locate desired projects, improving overall navigation efficiency.",
+    },
 ];
 
 export const ProjectRedesignOutcome = [
-    "Breaking the process into five distinct steps reduced user overwhelm and improved clarity.",
-    "Contextual guidance at each step made the process more intuitive and less intimidating.",
-    "Redesigned input fields improved usability and streamlined the user flow.",
-    "The dedicated questions section empowered Listers to make informed decisions, ensuring better Doer matches.",
+    { desc: "Breaking the process into five distinct steps reduced user overwhelm and improved clarity." },
+    { desc: "Contextual guidance at each step made the process more intuitive and less intimidating." },
+    { desc: "Redesigned input fields improved usability and streamlined the user flow." },
+    { desc: "The dedicated questions section empowered Listers to make informed decisions, ensuring better Doer matches." },
 ];
 
 export const ProfileRedesignOutcome = [
-    "The new layout, with clearly defined sections, made the profile easier to navigate and visually appealing.",
-    "Relevant user information was highlighted, reducing the need for excessive clicking and improving access to key details.",
-    "A prominent banner encouraged background check upgrades, resulting in a 12% increase in upgrades.",
-    "The breakdown of information into sections reduced friction, enabling users to find the data they needed quickly and efficiently.",
+    { desc: "The new layout, with clearly defined sections, made the profile easier to navigate and visually appealing." },
+    { desc: "Relevant user information was highlighted, reducing the need for excessive clicking and improving access to key details." },
+    { desc: "A prominent banner encouraged background check upgrades, resulting in a 12% increase in upgrades." },
+    { desc: "The breakdown of information into sections reduced friction, enabling users to find the data they needed quickly and efficiently." },
 ];
 
 export const ReflectionsList = [
-    "Adoption of New Features: While the introduction of features like the map view and the redesigned project listing flow received positive feedback, monitoring long-term engagement is essential to ensure users continue to leverage these tools effectively. For instance, ensuring that users actively utilize the map view and sorting options can validate the redesign’s success.",
-    "Profile Interactions: The new profile design aims to make information accessible and visually engaging. However, further analysis is needed to determine how these changes influence decision-making, such as whether the banner for background checks encourages genuine trust-building or simply drives financial gains.",
-    "User Behavior Trends: Understanding how users navigate and interact with the app in the long term is crucial. For example, tracking which features see consistent engagement and whether any areas of the app remain underutilized can guide iterative updates.",
-    "Diverse User Needs: As HUDU continues to grow, considering the diverse needs of users across regions, professions, and technical proficiency levels will be key. Ensuring inclusivity in design and functionality will help maintain broad user satisfaction.",
+    {
+        title: "Adoption of New Features:",
+        desc: " While the introduction of features like the map view and the redesigned project listing flow received positive feedback, monitoring long-term engagement is essential to ensure users continue to leverage these tools effectively. For instance, ensuring that users actively utilize the map view and sorting options can validate the redesign’s success.",
+    },
+    {
+        title: "Profile Interactions:",
+        desc: " The new profile design aims to make information accessible and visually engaging. However, further analysis is needed to determine how these changes influence decision-making, such as whether the banner for background checks encourages genuine trust-building or simply drives financial gains.",
+    },
+    {
+        title: "User Behavior Trends:",
+        desc: " Understanding how users navigate and interact with the app in the long term is crucial. For example, tracking which features see consistent engagement and whether any areas of the app remain underutilized can guide iterative updates.",
+    },
+    {
+        title: "Diverse User Needs:",
+        desc: " As HUDU continues to grow, considering the diverse needs of users across regions, professions, and technical proficiency levels will be key. Ensuring inclusivity in design and functionality will help maintain broad user satisfaction.",
+    },
+];
+
+export const ShopeyeQReflectionsList = [
+    {
+        title: "The Power of Research & Validation: ",
+        desc: "Conducting in-depth user research before design was crucial in validating pain points and ensuring that the final product truly addressed the needs of field sales representatives. By leveraging surveys, interviews, and competitive analysis, we discovered that manual reporting and lack of real-time data access were major inefficiencies, shaping our focus on automation and streamlined workflows.",
+    },
+    {
+        title: "Balancing Functionality & Usability: ",
+        desc: "One of the biggest challenges was designing a solution that was feature-rich yet intuitive. Sales representatives often work in fast-paced environments, and their tools must be efficient, not overwhelming. Through iterative wireframing and prototyping, we refined the navigation and interactions to minimize steps, reduce cognitive load, and prioritize critical tasks such as PoS scanning, task assignments, and reporting.",
+    },
+    {
+        title: "Integrating AI & Automation Thoughtfully: ",
+        desc: "The integration of AI-powered recommendations and intelligent automation was a game-changer. However, we had to ensure that these features complemented existing workflows rather than adding complexity. Testing high-fidelity prototypes helped us fine-tune how AI-driven insights were presented—keeping them contextual, non-intrusive, and actionable.",
+    },
+    {
+        title: "The Importance of Real-Time Data: ",
+        desc: "One of the most valuable insights from our research was the high demand for real-time inventory and sales data. Ensuring that users could access up-to-date information while on the go significantly boosted efficiency and accuracy in decision-making. The CRM and PoS integrations played a critical role in making this possible.",
+    },
+];
+
+export const ShopeyeQFinalThoughtsList = [
+    {
+        desc: "Further personalization of AI-driven recommendations",
+    },
+    {
+        desc: "Enhanced offline capabilities for better accessibility",
+    },
+    {
+        desc: "Gamification features to boost engagement and productivity",
+    },
 ];
 
 export const SurveyPercentages = [

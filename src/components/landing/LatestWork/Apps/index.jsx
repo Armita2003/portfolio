@@ -1,8 +1,14 @@
 import useResponsive from "@/hooks/useResponsive";
-import { WorkDetailContainer, WorkDetailLandingBox, WorkDetailLandingHeaderSubText, WorkDetailLandingHeaderText } from "@/Styles";
+import {
+    BackgroundIconButton,
+    WorkDetailContainer,
+    WorkDetailLandingBox,
+    WorkDetailLandingHeaderSubText,
+    WorkDetailLandingHeaderText,
+} from "@/Styles";
 import { Box, Stack } from "@mui/material";
 
-export default function AppDetails({ backgroundImageUrl, appImage, logoComponent, title, infoText, textColor, subTextColor }) {
+export default function AppDetails({ backgroundImageUrl, appImage, logoComponent, title, infoText, textColor, subTextColor, IconButtonsLogo }) {
     const SmallScreen = useResponsive("down", "md");
     const MediumScreen = useResponsive("down", "lg");
     return (
@@ -10,7 +16,6 @@ export default function AppDetails({ backgroundImageUrl, appImage, logoComponent
             container
             justifyContent="space-between"
             sx={{
-                zIndex: -10,
                 backgroundImage: `url(/${backgroundImageUrl})`,
                 backgroundSize: "cover",
                 position: "relative",
@@ -31,6 +36,17 @@ export default function AppDetails({ backgroundImageUrl, appImage, logoComponent
                         <WorkDetailLandingHeaderSubText color={subTextColor}>{infoText}</WorkDetailLandingHeaderSubText>
                     </Stack>
                 </Stack>
+                {IconButtonsLogo && (
+                    <Stack direction={"row"} gap={1} mt={"18px"}>
+                        {IconButtonsLogo.map((items) => {
+                            return (
+                                <BackgroundIconButton href={items.link} target="_blank">
+                                    <img style={{ cursor: "pointer" }} src={items.logo} width={24} height={24} />
+                                </BackgroundIconButton>
+                            );
+                        })}
+                    </Stack>
+                )}
             </WorkDetailLandingBox>
 
             <Box maxWidth="100%" maxHeight="100%" margin="auto">
@@ -51,7 +67,7 @@ export default function AppDetails({ backgroundImageUrl, appImage, logoComponent
                         src={`/WorkDetail/${appImage}`}
                         alt="Work Detail"
                         style={{
-                            width: SmallScreen ? "95%" : "600px",
+                            width: SmallScreen ? "95%" : appImage == "WorkDetail1.png" ? "590px" : "710px",
                             height: "auto",
                             maxWidth: "100%",
                             maxHeight: "100%",

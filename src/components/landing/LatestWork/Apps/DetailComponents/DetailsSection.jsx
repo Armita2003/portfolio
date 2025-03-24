@@ -25,6 +25,7 @@ export const DetailsSection = ({
     secondBoldSubText,
     secondList,
     textAfterBoldText,
+    percentagesColor,
 }) => {
     const SmallScreen = useResponsive("down", "md");
     const MediumScreen = useResponsive("down", "lg");
@@ -40,8 +41,9 @@ export const DetailsSection = ({
                     {list && (
                         <ul>
                             {list.map((items) => (
-                                <li>
-                                    <ListTypography>{items}</ListTypography>
+                                <li style={{ marginBottom: items.title ? 24 : 12 }}>
+                                    {items.title && <ListTypography title={true}>{items.title}</ListTypography>}
+                                    <ListTypography title={false}>{items.desc}</ListTypography>
                                 </li>
                             ))}
                         </ul>
@@ -50,8 +52,10 @@ export const DetailsSection = ({
                     {secondList && (
                         <ul>
                             {secondList.map((items) => (
-                                <li>
-                                    <ListTypography>{items}</ListTypography>
+                                <li style={{ marginBottom: items.title ? 24 : 12 }}>
+                                    {items.title && <ListTypography title={true}>{items.title}</ListTypography>}
+
+                                    <ListTypography title={false}>{items.desc}</ListTypography>
                                 </li>
                             ))}
                         </ul>
@@ -72,7 +76,7 @@ export const DetailsSection = ({
                                 pb={2}
                                 borderBottom="3px"
                             >
-                                <WorkDetailPercentages>{item.number}</WorkDetailPercentages>
+                                <WorkDetailPercentages color={percentagesColor}>{item.number}</WorkDetailPercentages>
                                 <WorkDetailSubTextPercentages>{item.text}</WorkDetailSubTextPercentages>
                             </Grid>
                         ))}

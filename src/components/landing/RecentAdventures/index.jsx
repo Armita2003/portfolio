@@ -7,7 +7,7 @@ export default function RecentAdventures() {
     const isMedium = useResponsive("down", "md");
     return (
         <Stack gap={5}>
-            <Tags width={162} height={36}>
+            <Tags width={138} height={15}>
                 <TagTypography color="black">
                     Recent
                     <span style={{ color: "#8C404E" }}> Adventures</span>
