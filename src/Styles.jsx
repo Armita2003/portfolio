@@ -596,12 +596,37 @@ export const KeyBehavioralPatternsList = [
 
 export const MeetingInsightsList = [
     {
-        desc: "Purpose of the Landing Page: Showcase AppBaker’s expertise in delivering digital products, ranging from MVP development to full-scale app solutions, across various industries including tech, healthcare, and e-commerce.",
+        desc: (
+            <>
+                <strong>Purpose of the Landing Page:</strong> Showcase AppBaker’s expertise in delivering digital products, ranging from MVP
+                development to full-scale app solutions, across various industries including tech, healthcare, and e-commerce.
+            </>
+        ),
     },
-    { desc: "Target Audience: Businesses seeking to develop custom applications, including startups and enterprises in diverse sectors." },
-    { desc: "KPIs: Increase inbound inquiries, enhance brand credibility, boost client engagement, and elevate lead conversion rates." },
     {
-        desc: "Business Objectives: Position AppBaker as a leader in app development, drive project acquisition, and highlight their expertise in delivering secure, high-quality, and scalable digital solutions.",
+        desc: (
+            <>
+                {" "}
+                <strong>Target Audience:</strong> Businesses seeking to develop custom applications, including startups and enterprises in diverse
+                sectors.
+            </>
+        ),
+    },
+    {
+        desc: (
+            <>
+                <strong> KPIs:</strong> Increase inbound inquiries, enhance brand credibility, boost client engagement, and elevate lead conversion
+                rates."{" "}
+            </>
+        ),
+    },
+    {
+        desc: (
+            <>
+                <strong>Business Objectives:</strong> Position AppBaker as a leader in app development, drive project acquisition, and highlight their
+                expertise in delivering secure, high-quality, and scalable digital solutions.
+            </>
+        ),
     },
 ];
 

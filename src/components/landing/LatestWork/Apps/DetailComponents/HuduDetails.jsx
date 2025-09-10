@@ -34,7 +34,14 @@ export default function HuduDetails() {
             <DetailsSection
                 title="User Interviews: Understanding HUDU's User Experience"
                 subtexts={[
-                    "While I had gained a solid understanding of the market, competitors, and the general audience, I wanted to delve deeper into the actual users of HUDU. Who exactly are the people using HUDU, and what have their experiences been like while navigating the platform? This is when I decided to conduct user interviews to uncover valuable insights directly from the users.",
+                    <>
+                        While I had gained a solid understanding of the market, competitors, and the general audience, I wanted to delve deeper into
+                        the actual users of HUDU.
+                        <strong>
+                            Who exactly are the people using HUDU, and what have their experiences been like while navigating the platform?
+                        </strong>
+                        This is when I decided to conduct user interviews to uncover valuable insights directly from the users.
+                    </>,
                     "I interviewed six frequent users who fit the demographics identified during my market research. In these interviews, I asked open-ended questions to better understand their needs, pain points, and expectations from the app. The research goals I focused on were:",
                 ]}
                 list={UserInterviewList}
