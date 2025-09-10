@@ -1,13 +1,41 @@
 import useResponsive from "@/hooks/useResponsive";
-import { Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 export default function LandingFirstSlide() {
     const isMediumScreen = useResponsive("down", "lg");
     const isSmallScreen = useResponsive("down", "md");
     const isExtraSmallScreen = useResponsive("down", "sm");
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        let timeoutId;
+        if (isVisible) {
+            timeoutId = setTimeout(() => {
+                setIsVisible(false);
+            }, 2000);
+        }
+        return () => clearTimeout(timeoutId);
+    }, [isVisible]);
+
+    const handleMouseMove = () => {
+        setIsVisible(true);
+    };
 
     return (
-        <Container maxWidth="xl" sx={{ padding: "0px !important" }}>
+        <Container onMouseMove={handleMouseMove} maxWidth="xl" sx={{ padding: "0px !important" }}>
+            <Box
+                component="img"
+                src="/HeroCatAnimation.gif"
+                sx={{
+                    display: "block",
+                    position: "absolute",
+                    bottom: 0,
+                    opacity: isVisible ? 1 : 0,
+                    transition: "opacity 0.3s ease-in-out",
+                    pointerEvents: "none",
+                }}
+            />
             <Grid container justifyContent="space-evenly" direction="row">
                 <Grid sm={6} item py={isExtraSmallScreen ? 5 : isSmallScreen ? "10px" : "119.5px"} alignSelf="center">
                     <Stack
@@ -16,7 +44,7 @@ export default function LandingFirstSlide() {
                         p={isExtraSmallScreen ? 0 : 1}
                         pr={isExtraSmallScreen ? 0 : isSmallScreen ? 8 : 10}
                     >
-                        <Stack maxWidth={isExtraSmallScreen ? "100%" : isSmallScreen ? "330px" : "497px"} gap={4}>
+                        <Stack maxWidth={isExtraSmallScreen ? "100%" : isSmallScreen ? "330px" : "100%"} gap={4}>
                             <Typography
                                 mb={0}
                                 sx={{ fontSize: isExtraSmallScreen ? 20 : isSmallScreen ? 16 : isMediumScreen ? 28 : 32, fontWeight: 700 }}
@@ -30,10 +58,9 @@ export default function LandingFirstSlide() {
                                 className="landingTypography"
                                 lineHeight={"22px"}
                             >
-                                I design digital experiences that are purrfectly intuitive—so easy to use, even your cat could navigate them. Every
-                                interaction is crafted with simplicity in mind, ensuring your users have a smooth, paws-itively delightful experience.
-                                Whether it’s sleek web designs or user-friendly apps, I make sure my creations are as natural as a cat’s curiosity.
-                                Because in my world, great design is all about creating seamless, claw-some experiences that users can’t resist
+                                Senior UI/UX Designer with 10+ years of experience driving end-to-end design for global startups and enterprise
+                                products. Skilled in research, design strategy, and cross-functional collaboration to deliver impactful, user-centered
+                                digital solutions.
                             </Typography>
                         </Stack>
                     </Stack>

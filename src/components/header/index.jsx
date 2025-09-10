@@ -23,41 +23,25 @@ export function Header() {
         localStorage.setItem("activeLink", link);
     };
 
-    const handleButtonClick = () => {
-        window.open("/Resume.pdf", "_blank");
-    };
-
     const isSmallScreen = useResponsive("down", "md");
     return (
-        <Stack mb={isSmallScreen ? "50px" : "100px"} direction="row" justifyContent="space-between">
+        <Stack direction="row" justifyContent="space-between">
             <Stack direction="row" gap={isSmallScreen ? 1 : 2}>
                 <Stack width={isSmallScreen ? 20 : 24} height={isSmallScreen ? 20 : 24}>
                     <Logo />
                 </Stack>
                 <Typography sx={{ mt: 0.2, fontSize: isSmallScreen ? 13 : 16 }} className="heading">
-                    Ersa Khorsandi
+                    Maris Niibek
                 </Typography>
             </Stack>
 
-            <Stack direction="row" gap={2}>
-                <SubLink
-                    sx={{ cursor: "pointer" }}
-                    onClick={() => handleClick("Work")}
-                    className={`headerSubLinks ${activeLink === "Work" ? "active" : ""}`}
-                >
-                    Work
-                </SubLink>
-                <SubLink
-                    sx={{ cursor: "pointer" }}
-                    onClick={() => {
-                        handleClick("Resume");
-                        handleButtonClick();
-                    }}
-                    className={`headerSubLinks ${activeLink === "Resume" ? "active" : ""}`}
-                >
-                    Resume
-                </SubLink>
-            </Stack>
+            <SubLink
+                sx={{ cursor: "pointer" }}
+                onClick={() => handleClick("Work")}
+                className={`headerSubLinks ${activeLink === "Work" ? "active" : ""}`}
+            >
+                Work
+            </SubLink>
         </Stack>
     );
 }

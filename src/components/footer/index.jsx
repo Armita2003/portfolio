@@ -5,10 +5,6 @@ import { Box, Grid, Stack } from "@mui/material";
 export default function Footer() {
     const isSmall = useResponsive("down", "sm");
 
-    const handleButtonClick = () => {
-        window.open("/Resume.pdf", "_blank");
-    };
-
     return (
         <Stack mt={isSmall ? 5 : 10}>
             <Grid container>
@@ -32,14 +28,11 @@ export default function Footer() {
                     </>
                     <Stack mt={4} gap={2} direction={isSmall ? "column" : "row"}>
                         <FooterButton
-                            href="https://mail.google.com/mail/?view=cm&fs=1&to=mir.ersa@gmail.com&su=Hello&body=I'd%20like%20to%20connect%20with%20you."
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=marisniibek@gmail.com&su=Hello&body=I'd%20like%20to%20connect%20with%20you."
                             target="_blank"
                             sx={{ backgroundColor: "#8C404E" }}
                         >
                             <FooterButtonText sx={{ color: "white" }}>Drop a message</FooterButtonText>
-                        </FooterButton>
-                        <FooterButton onClick={() => handleButtonClick()} sx={{ backgroundColor: "white", border: "1px solid #F0F0F0" }}>
-                            <FooterButtonText sx={{ color: "#8C404E" }}>View resume</FooterButtonText>
                         </FooterButton>
                     </Stack>
                 </Grid>

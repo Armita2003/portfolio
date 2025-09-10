@@ -55,11 +55,11 @@ export default function App({ Component, pageProps }) {
     }, []);
 
     const getPageTitle = () => {
-        if (loading) return "Ersa Khorsandi";
+        if (loading) return "Maris Niibek";
         const pathSegments = router.asPath.split("/").filter(Boolean);
         console.log("Path Segments:", pathSegments);
 
-        if (pathSegments.length === 0) return "Ersa Khorsandi";
+        if (pathSegments.length === 0) return "Maris Niibek";
 
         const lastSegment = pathSegments[pathSegments.length - 1];
 
@@ -72,7 +72,7 @@ export default function App({ Component, pageProps }) {
         <>
             <Head>
                 <title>{getPageTitle()}</title>
-                <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+                <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
             </Head>
             <main className={`${ppHatton.variable} ${satoshi.variable}`}>
                 {getLayout(<Component {...pageProps} />)} <SpeedInsights />
