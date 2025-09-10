@@ -72,7 +72,7 @@ export default function App({ Component, pageProps }) {
         <>
             <Head>
                 <title>{getPageTitle()}</title>
-                <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
+                <link rel="icon" type="image/svg+xml" href="/MNLogo.svg" />
             </Head>
             <main className={`${ppHatton.variable} ${satoshi.variable}`}>
                 {getLayout(<Component {...pageProps} />)} <SpeedInsights />
