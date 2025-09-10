@@ -36,7 +36,7 @@ export default function LandingFirstSlide() {
                     pointerEvents: "none",
                 }}
             />
-            <Grid container justifyContent="space-evenly" direction="row">
+            <Grid container justifyContent="space-evenly" direction="row" pt={"32px"}>
                 <Grid sm={6} item py={isExtraSmallScreen ? 5 : isSmallScreen ? "10px" : "119.5px"} alignSelf="center">
                     <Stack
                         alignContent="center"
@@ -44,7 +44,7 @@ export default function LandingFirstSlide() {
                         p={isExtraSmallScreen ? 0 : 1}
                         pr={isExtraSmallScreen ? 0 : isSmallScreen ? 8 : 10}
                     >
-                        <Stack maxWidth={isExtraSmallScreen ? "100%" : isSmallScreen ? "330px" : "100%"} gap={4}>
+                        <Stack maxWidth={isExtraSmallScreen ? "100%" : isSmallScreen ? "330px" : "100%"} gap={2}>
                             <Typography
                                 mb={0}
                                 sx={{ fontSize: isExtraSmallScreen ? 20 : isSmallScreen ? 16 : isMediumScreen ? 28 : 32, fontWeight: 700 }}

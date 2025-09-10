@@ -8,7 +8,7 @@ export default function LatestWorkGrid() {
 
     const handleCardClick = (name, e) => {
         e.preventDefault();
-        window.open(`/Work/${encodeURIComponent(name)}`, "_blank");
+        window.open(`/${encodeURIComponent(name)}`, "_blank");
     };
 
     return (
@@ -18,7 +18,7 @@ export default function LatestWorkGrid() {
                     return (
                         <Grid key={index} item xs={12} md={5.8} lg={3.8}>
                             <LatestWorkContainers
-                                href={`/Work/${encodeURIComponent(items.name)}`}
+                                href={`/${encodeURIComponent(items.name)}`}
                                 target="_blank"
                                 onClick={(e) => handleCardClick(items.name, e)}
                                 sx={{

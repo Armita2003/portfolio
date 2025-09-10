@@ -97,7 +97,7 @@ export default function ShopeyeQDetails() {
             <Stack pt={SmallScreen ? 2.5 : 5} pb={SmallScreen ? 5 : 10}>
                 <Stack position="relative" display="inline-block" direction="column">
                     <img src="/AppImages/HighFidelityWireFrames.png" alt="High-Fidelity Wireframes: Refining the Vision" style={{ width: "100%" }} />
-                    <Link href="/Work/ShopeyeQ/Prototype" target="_blank" passHref>
+                    <Link href="/ShopeyeQ/Prototype" target="_blank" passHref>
                         <Button
                             variant="text"
                             sx={{
