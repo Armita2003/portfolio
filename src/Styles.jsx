@@ -276,7 +276,7 @@ export const Works = [
 export const Adventure = [
     {
         company: "APSY",
-        role: "Product Owner",
+        role: "Senior User Experience Designer",
         location: "United States | May 2023 - Aug 2025",
         list: [
             "Promoted from UI/UX Designer to lead design initiatives, taking ownership of end-to-end user experience across multiple projects",
@@ -290,7 +290,7 @@ export const Adventure = [
     },
     {
         company: "WELF",
-        role: "Designer",
+        role: "UI/UX Designer",
         location: "Germany | Oct 2020 - Apr 2023",
         list: [
             "Key contributor to the rebranding of WELF and the design of the company’s main landing page, strengthening brand identity and digital presence",
@@ -301,7 +301,7 @@ export const Adventure = [
     },
     {
         company: "Redwall",
-        role: "Designer",
+        role: "UI/UX Designer",
         location: "Estonia | Aug 2015 - Sep 2020",
         list: [
             "Redesigned the company’s website and developed a tailored app for their existing client base",
