@@ -4,12 +4,12 @@ import LandingFirstSlide from "./LandingFirstSlide";
 import LatestWork from "./LatestWork";
 
 export function Landing() {
-    return (
-        <>
-            <Header />
-            <LandingFirstSlide />
-            <LatestWork />
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <LandingFirstSlide />
+      <LatestWork />
+      <Footer />
+    </>
+  );
 }
