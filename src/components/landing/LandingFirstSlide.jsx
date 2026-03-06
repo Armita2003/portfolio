@@ -36,7 +36,7 @@ export default function LandingFirstSlide() {
               <Typography
                 mb={0}
                 sx={{
-                  fontSize: isExtraSmallScreen ? 20:isSmallScreen:16 : isMediumScreen ? 28 : 32,
+                  fontSize: isExtraSmallScreen ? 20:isSmallScreen?16 : isMediumScreen ? 28 : 32,
                   fontWeight: 700,
                 }}
                 className="landing"
@@ -44,7 +44,7 @@ export default function LandingFirstSlide() {
                 UX So Intuitive, Even Your Cat Could Use It.
               </Typography>
               <Typography
-                sx={{ fontSize: isExtraSmallScreen ? 12:isSmallScreen:10 : 16 }}
+                sx={{ fontSize: isExtraSmallScreen ? 12:isSmallScreen?10 : 16 }}
                 fontWeight={500}
                 className="landingTypography"
                 lineHeight={"26px"}
