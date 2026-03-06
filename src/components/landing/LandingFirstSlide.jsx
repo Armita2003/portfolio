@@ -24,19 +24,19 @@ export default function LandingFirstSlide() {
 
   return (
     <Container onMouseMove={handleMouseMove} maxWidth="xl" sx={{ padding: "0px !important" }}>
-      <Grid container justifyContent="start" direction="row" pt={"32px"}>
-        <Grid md={11} item py={isExtraSmallScreen ? 5 : isSmallScreen ? "10px" : "119.5px"} alignSelf="center">
+      <Grid container justifyContent="space-evenly" direction="row" pt={"32px"}>
+        <Grid md={6} item py={isExtraSmallScreen ? 5 : isSmallScreen ? "10px" : "119.5px"} alignSelf="center">
           <Stack
             alignContent="center"
             alignSelf="center"
             p={isExtraSmallScreen ? 0 : 1}
-          
+          pr={isExtraSmallScreen?0:isSmallScreen ? 8:10}
           >
-            <Stack gap={2}>
+            <Stack maxWidth={isExtraSmallScreen? "100%":isSmallScreen ? "330px":"100%"} gap={2}>
               <Typography
                 mb={0}
                 sx={{
-                  fontSize: isExtraSmallScreen ? 20 : isMediumScreen ? 28 : 32,
+                  fontSize: isExtraSmallScreen ? 20:isSmallScreen:16 : isMediumScreen ? 28 : 32,
                   fontWeight: 700,
                 }}
                 className="landing"
@@ -44,7 +44,7 @@ export default function LandingFirstSlide() {
                 UX So Intuitive, Even Your Cat Could Use It.
               </Typography>
               <Typography
-                sx={{ fontSize: isExtraSmallScreen ? 12 : 16 }}
+                sx={{ fontSize: isExtraSmallScreen ? 12:isSmallScreen:10 : 16 }}
                 fontWeight={500}
                 className="landingTypography"
                 lineHeight={"26px"}
@@ -58,9 +58,9 @@ export default function LandingFirstSlide() {
             </Stack>
           </Stack>
         </Grid>
-        {/*  <Grid sm={6} margin="auto" item width="100%" height="100%">
+         <Grid sm={6} margin="auto" item width="100%" height="100%">
           <Stack position="relative">
-            <img
+            {/*  <img
               style={{
                 width: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
                 height: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
@@ -69,9 +69,9 @@ export default function LandingFirstSlide() {
               }}
               src="/ProfilePic.png"
               alt="Profile Picture"
-            />
+            /> */}
           </Stack>
-        </Grid> */}
+        </Grid> 
       </Grid>
       <Box
         component="img"
