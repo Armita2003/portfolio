@@ -60,7 +60,7 @@ export default function LandingFirstSlide() {
         </Grid>
         <Grid sm={6} margin="auto" item width="100%" height="100%">
           <Stack position="relative">
-            <img
+            {/* <img
               style={{
                 width: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
                 height: isExtraSmallScreen ? "80%" : isSmallScreen ? "100%" : "100%",
@@ -69,7 +69,7 @@ export default function LandingFirstSlide() {
               }}
               src="/ProfilePic.png"
               alt="Profile Picture"
-            />
+            /> */}
           </Stack>
         </Grid>
       </Grid>
