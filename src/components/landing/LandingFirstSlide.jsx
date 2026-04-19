@@ -70,7 +70,6 @@ export default function LandingFirstSlide() {
               src="/ProfilePic.png"
               alt="Profile Picture"
             /> */}
-            /> */}
           </Stack>
         </Grid> 
       </Grid>
